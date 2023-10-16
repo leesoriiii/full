@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>cube.jsp</title>
+<title>best.jsp</title>
 <style type="text/css">
 @font-face{
 font-family:'DNFBitBitv2';
@@ -21,76 +21,8 @@ body {
 	justify-content: center;
     align-items: center;
 }
-.perspective {
-/* 	border: 10px solid green; */
- 	display: inline-block;
-	margin: 100px 0px 0px 100px;
-	
-	perspective: 500px;
-}
-
-.cube {
-	width: 250px; /* 현재 크기의 5배 */
-	height: 250px; /* 현재 크기의 5배 */
-	font-size: 2.5em; /* 텍스트 크기를 큐브 크기에 맞게 조절 (50px * 5) */
-	line-height: 250px; /* 큐브 크기에 맞게 조절 */
- 	display: inline-block;
-	
-   	transform-style: preserve-3d;
-
-/* 	transform: rotateX(45deg); */
-	animation: rotate 10s infinite linear;
-}
-
-.base {
-/* 	border:10px solid red; */
-	width: 250px;
-	height: 250px;
-	font-size: 0.5em;
-	text-align: center;
-	line-height: 250px;
-}
-
-.front, .back, .left, .right, .top, .bottom {
-	position: absolute;
-	top: 0px;
-	left: 0px;
-	
-	opacity: 0.9;
-	box-shadow: 0px 0px 50px 5px #f19292;
-}
 
 
-.front {
-  transform: translateZ(125px); /* 기존 25px 대신 125px */
-  background: #f19292;
-}
-
-.back {
-  transform: rotateY(450deg) translateZ(125px); /* 기존 125px 대신 625px */
-  background: #ffffff;
-}
-
-.left {
-  transform: rotateY(-90deg) translateZ(125px); /* 기존 25px 대신 125px */
-  background: #FFEA7B;
-}
-
-.right {
-  transform: rotateY(90deg) translateZ(125px); /* 기존 25px 대신 125px */
-  background: #B7FF96;
- 
-}
-
-.top {
-  transform: rotateX(90deg) translateZ(125px); /* 기존 25px 대신 125px */
-  background: #41E9FF;
-}
-
-.bottom {
-  transform: rotateX(-90deg) translateZ(125px); /* 기존 25px 대신 125px */
-  background: #B17AFF;
-}
 #heading{
 	font-family:'DNFBitBitv2';
 	margin: 150px;
@@ -98,30 +30,61 @@ body {
     font-size: 80px;
     text-shadow: 2px 2px #f19292;
 }
-@keyframes rotate {
-	from {
-		transform: rotateX(0deg) rotateY(360deg) rotateZ(0deg);
-	}
-	to {
-		transform: rotateX(360deg) rotateY(0deg) rotateZ(360deg);
-	}
+.slider {
+  position: relative;
+  width: 200px;
+  overflow: hidden;
 }
 
+.slides {
+  display: flex;
+  transition: transform 0.5s;
+}
+
+.slides img {
+  width: 200px;
+}
+
+button {
+  cursor: pointer;
+}
 </style>
 </head>
 <body>
 <hr>
-<section class="perspective">
-	<article class="cube">
-		<div class="base">이소리</div>
-		<div class="base front">Alpha</div>
-		<div class="base back">Animation</div>
-		<div class="base left">React</div>
-		<div class="base right">Employee</div>
-		<div class="base top">City</div>
-		<div class="base bottom">Login</div>
-	</article>
-</section>
+<div class="slider">
+  <div class="slides">
+    <img src="../img/julmi.jpg" alt="Image 1">
+    <img src="../img/kkul_Wallet.jpg" alt="Image 2">
+    <img src="../img/snow_princess.jpg" alt="Image 3">
+  </div>
+  <button id="prevBtn">◀</button>
+  <button id="nextBtn">▶</button>
+</div>
+
 <h1 id="heading">베스트화면</h1>
+
+<script type="text/javascript">
+	const slides = document.querySelector('.slides');
+	const prevBtn = document.getElementById('prevBtn');
+	const nextBtn = document.getElementById('nextBtn');
+	let currentIndex = 0;
+
+	function moveToSlide(index) {
+		const slideWidth = 400; // 이미지 너비가 400px인 경우
+		slides.style.transform = `translateX(-${index * slideWidth}px)`;
+	}
+
+
+	prevBtn.addEventListener('click', () => {
+  		currentIndex = (currentIndex - 1) % 3; // 이미지 개수에 따라 순환
+  		moveToSlide(currentIndex);
+	});
+
+	nextBtn.addEventListener('click', () => {
+		currentIndex = (currentIndex + 1) % 3;
+		moveToSlide(currentIndex);
+	});
+</script>
 </body>
 </html>

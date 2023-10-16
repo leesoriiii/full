@@ -62,7 +62,7 @@
 	height: 5px;
 }
 
-.menu-item:hover > .menu-title {
+.menu-title:hover { 
 	color: #83C3B5
 }
 .menu-title {
@@ -73,6 +73,10 @@
 	text-align: center;
 	letter-spacing: -1px;
 }
+.menu-item:hover .menu-title,
+.sub-menu-item:hover > .menu-title {
+    color: #83C3B5;
+ }
 .menu-item::before {
   content: "";
   position: absolute;
@@ -172,14 +176,18 @@ $(document).ready(function() {
 		</ol>
 	</li>
 	<li class="menu-item">
-		<div class="menu-title">뽀삐와칭구들</div>
+		<a href="bbobbi.jsp" target="content" style="text-decoration: none;">
+			<div class="menu-title">뽀삐와칭구들</div>
+		</a>
 		<ol class="sub-menu">
 			<li class="sub-menu-item"><a target="content" href="/ani/fill">인형</a></li>
 			<li class="sub-menu-item"><a target="content" href="/placeholder.jsp">굿즈상품</a></li>
 		</ol>
 	</li>
 	<li class="menu-item">
-		<div class="menu-title">악세사리</div>
+		<a href="accessory.jsp" target="content" style="text-decoration: none;">
+			<div class="menu-title">악세사리</div>
+		</a>
 		<ol class="sub-menu">
 			<li class="sub-menu-item"><a target="content" href="/fill.jsp">헤어핀</a></li>
 			<li class="sub-menu-item"><a target="content" href="/fill.jsp">스마트톡</a></li>
@@ -187,7 +195,9 @@ $(document).ready(function() {
 		</ol>
 	</li>
 	<li class="menu-item">
-		<div class="menu-title">반려용품</div>
+		<a href="animal.jsp" target="content" style="text-decoration: none;">
+			<div class="menu-title">반려용품</div>
+		</a>
 		<ol class="sub-menu">
 			<li class="sub-menu-item"><a target="content" href="/dept/list">케이프</a></li>
 			<li class="sub-menu-item"><a target="content" href="/emp/list">빕 스카프</a></li>
@@ -195,7 +205,9 @@ $(document).ready(function() {
 		</ol>
 	</li>
 	<li class="menu-item">
-		<div class="menu-title">문의</div>
+		<a href="cs.jsp" target="content" style="text-decoration: none;">
+			<div class="menu-title">문의</div>
+		</a>
 		<ol class="sub-menu">
 			<li class="sub-menu-item"><a target="content" href="/city/list">city</a></li>
 			<li class="sub-menu-item"><a target="content" href="/country/list">country</a></li>
