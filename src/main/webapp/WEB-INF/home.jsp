@@ -5,7 +5,6 @@
 <head>
 <meta charset="UTF-8">
 <title>가득샵</title>
-<link rel="stylesheet" href="/css/cube.css">
 <link rel="icon" href="favicon.png">
 <link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-gothic-eco.css" rel="stylesheet">
 <style type="text/css">
@@ -54,29 +53,14 @@
 	left: 0px;
 }
 
-.menu-item {
+.menu-item { /*상단메뉴바*/
 	padding: 5px;
 	width: 130px;
 	flex-shrink: 0;
 	background: #ffffff;
 	height: 5px;
+	transition: margin-top 1s;
 }
-
-.menu-title:hover { 
-	color: #83C3B5
-}
-.menu-title {
-	font-family: 'Dovemayo_gothic';
-	padding: 15px;
-	font-size: 22px;
-	color: #FBA720;
-	text-align: center;
-	letter-spacing: -1px;
-}
-.menu-item:hover .menu-title,
-.sub-menu-item:hover > .menu-title {
-    color: #83C3B5;
- }
 .menu-item::before {
   content: "";
   position: absolute;
@@ -92,11 +76,27 @@
 	display: block;
 }
 
+
 .menu-item:last-child {
 	margin-left: auto;
 	margin-right: 10px;
 }
 
+.menu-title:hover { 
+	color: #83C3B5
+}
+.menu-title { /*상단메뉴 내용*/
+	font-family: 'Dovemayo_gothic';
+	padding: 15px;
+	font-size: 22px;
+	color: #FBA720;
+	text-align: center;
+	letter-spacing: -1px;
+}
+.menu-item:hover .menu-title,
+.sub-menu-item:hover > .menu-title {
+    color: #ed616f;
+ }
 .sub-menu {
 	font-family: 'Dovemayo_gothic';
 	display: none;
@@ -104,20 +104,15 @@
 	padding-left: 0px;
 	overflow: hidden;
 	text-align: center;
-	
 }
 
-.sub-menu-item {
-	color: white;
-
-}
 
 .sub-menu-item > a {
 	display: block;
 	padding: 10px;
 	font-size: 18px;
 	text-decoration: none;
-	color: white;
+	color: #FBA720;
 	
 }
 
@@ -141,13 +136,7 @@ iframe {
 </style>
 
 <script type="text/javascript" src="/webjars/jquery/jquery.min.js"></script>
-<script type="text/javascript">
 
-$(document).ready(function() {
-	setInterval(resize, 100);
-});
-
-</script>
 </head>
 <body>
 <nav style="backgroundcolor: white">
@@ -167,20 +156,14 @@ $(document).ready(function() {
 		<a href="best.jsp" target="content" style="text-decoration: none;">
 			<div class="menu-title">베스트</div>
 		</a>
-		<ol class="sub-menu">
-			<li class="sub-menu-item"><a target="content" href="/alpha/fill">fill</a></li>
-			<li class="sub-menu-item"><a target="content" href="/alpha/cross">cross</a></li>
-			<li class="sub-menu-item"><a target="content" href="/alpha/race">race</a></li>
-			<li class="sub-menu-item"><a target="content" href="/alpha/zigzag">zigzag</a></li>
-			<li class="sub-menu-item"><a target="content" href="/cube5.jsp">cube</a></li>
-		</ol>
 	</li>
 	<li class="menu-item">
 		<a href="bbobbi.jsp" target="content" style="text-decoration: none;">
 			<div class="menu-title">뽀삐와칭구들</div>
 		</a>
 		<ol class="sub-menu">
-			<li class="sub-menu-item"><a target="content" href="/ani/fill">인형</a></li>
+			<li class="sub-menu-item"><a target="content" href="/ani/fill">키덜트인형</a></li>
+			<li class="sub-menu-item"><a target="content" href="/ani/fill">절미</a></li>
 			<li class="sub-menu-item"><a target="content" href="/placeholder.jsp">굿즈상품</a></li>
 		</ol>
 	</li>
@@ -208,10 +191,6 @@ $(document).ready(function() {
 		<a href="cs.jsp" target="content" style="text-decoration: none;">
 			<div class="menu-title">문의</div>
 		</a>
-		<ol class="sub-menu">
-			<li class="sub-menu-item"><a target="content" href="/city/list">city</a></li>
-			<li class="sub-menu-item"><a target="content" href="/country/list">country</a></li>
-		</ol>
 	</li>
 	<li class="menu-item">
 		<div class="menu-title">Login</div>
@@ -223,12 +202,8 @@ $(document).ready(function() {
 		width="100%"
 		scrolling="no"
 		frameborder='0'
-		sendbox="allow-same-origin"
-		onload="resize()">
+		sendbox="allow-same-origin">
 i frame 태그를 지원하지 않는 브라우저는 이 글이 보입니다.
 </iframe>
-
-
-
 </body>
 </html>

@@ -1,0 +1,120 @@
+@charset "UTF-8";
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face{
+font-family:'DNFBitBitv2';
+font-style:normal;font-weight:400;src:url('//cdn.df.nexon.com/img/common/font/DNFBitBitv2.otf')format('opentype')}
+
+@font-face {
+    font-family: 'omyu_pretty';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-01@1.0/omyu_pretty.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+	margin-top: 130px;
+	background-color: #FCDEAB;
+	display: flex;
+ 	flex-direction: column;
+    justify-content: center;
+	justify-content: center;
+    align-items: center;
+}
+
+
+#heading{
+	font-family:'DNFBitBitv2';
+	color: white;
+    font-size: 80px;
+    text-shadow: 2px 2px #faa821;
+}
+
+/* 보여줄 구간의 높이와 넓이 설정 */
+#slideShow {
+  /*전체 컨테이너*/
+  width: 800px; /*이미지 700(+여백100)x500*/
+  height: 750px;
+  position: relative;
+  margin-bottom: 500px;
+  overflow: hidden; /*리스트 형식으로 이미지를 일렬로 정렬할 것이기 때문에, 500px 밖으로 튀어 나간 이미지들은 hidden으로 숨겨줘야됨*/
+}
+.slides {
+  /*이미지들이 담겨있는 슬라이드 컨테이너*/
+  position: absolute;
+  margin-left: -200px; /* 왼,오 비대칭 맞춰줌 */
+  left: 0;
+  top: 0;
+  width: 2700px; /* 슬라이드할 사진과 마진 총 넓이 */
+  transition: 0.2s ease-out; /*ease-out: 처음에는 느렸다가 점점 빨라짐*/
+  list-style: none;
+} 
+
+.slides li {
+  float: left;
+  margin-right: 0px;
+  height: 600px;/* 이미지 높이를 600px로 설정 */
+}
+
+.slides li:not(:last-child) {/* 슬라이드들 옆으로 정렬 */
+  float: left;
+  /*margin-right: 100px;*/
+}
+
+.controller span {
+  position: absolute;
+  background-color: transparent;
+  color:#FFFFFF;
+  text-align: center;
+  border-radius: 50%;
+  padding: 10px 20px;
+  top: 50%;
+  font-size: 1.3em;
+  cursor: pointer;
+} /* 이전, 다음 화살표에 마우스 커서가 올라가 있을때 */
+.controller span:hover {
+  background-color: rgba(128, 128, 128, 0.11);
+}
+.prev {
+  left: 10px;
+} /* 이전 화살표에 마우스 커서가 올라가 있을때 이전 화살표가 살짝 왼쪽으로 이동하는 효과*/
+.prev:hover {
+  transform: translateX(-10px);
+}
+.next {
+  right: 10px;
+} /* 다음 화살표에 마우스 커서가 올라가 있을때 이전 화살표가 살짝 오른쪽으로 이동하는 효과*/
+.next:hover {
+  transform: translateX(10px);
+}
+
+.slide-content {
+  display: flex;
+  align-items: center; /* 이미지와 텍스트를 수직 중앙 정렬 */
+  flex-direction: column; /* 요소들을 세로로 배치 */
+  gap: 10px; /* 이미지와 제목/설명 사이의 간격 조정 */
+}
+
+.slide-content h2, .slide-content p {
+  /* 제목과 설명 스타일 설정 */
+  text-align: center; /* 텍스트 가운데 정렬 */
+}
+
+h2 {
+	margin-top: 20px;
+	font-size: 50px;
+	font-family: 'omyu_pretty';
+	color: #FFFFFF;
+	text-shadow: 1px 1px #faa821;
+}
+
+p {
+	font-size: 25px;
+	font-family: 'omyu_pretty';
+	color: #FFFFFF;
+	text-shadow: 1px 1px #faa821;
+}

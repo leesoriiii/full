@@ -1,90 +1,67 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="jakarta.tags.core"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>best.jsp</title>
-<style type="text/css">
-@font-face{
-font-family:'DNFBitBitv2';
-font-style:normal;font-weight:400;src:url('//cdn.df.nexon.com/img/common/font/DNFBitBitv2.otf')format('opentype')}
-div { 
-	color: #ffffff;
-}
-body {
-	margin: 100px;
-	background-color: #FCDEAB;
-	display: flex;
- 	flex-direction: column;
-    justify-content: center;
-	justify-content: center;
-    align-items: center;
-}
-
-
-#heading{
-	font-family:'DNFBitBitv2';
-	margin: 150px;
-	color: white;
-    font-size: 80px;
-    text-shadow: 2px 2px #f19292;
-}
-.slider {
-  position: relative;
-  width: 200px;
-  overflow: hidden;
-}
-
-.slides {
-  display: flex;
-  transition: transform 0.5s;
-}
-
-.slides img {
-  width: 200px;
-}
-
-button {
-  cursor: pointer;
-}
-</style>
+<link rel="stylesheet" href="css/slides.css">
 </head>
 <body>
+<h1 id="heading">BEST</h1>
 <hr>
-<div class="slider">
-  <div class="slides">
-    <img src="../img/julmi.jpg" alt="Image 1">
-    <img src="../img/kkul_Wallet.jpg" alt="Image 2">
-    <img src="../img/snow_princess.jpg" alt="Image 3">
-  </div>
-  <button id="prevBtn">◀</button>
-  <button id="nextBtn">▶</button>
+<div id="slideShow">
+  <ul class="slides">
+    <li>
+    <div class="slide-content">
+    	<img src="../img/julmi.png" alt="Image 1" id="img">
+			<h2>나만의 작은 애착인형 절미</h2>
+			<p>#애착인형 #키링 #그립톡 #핸드폰고리</p>
+    </div>
+    </li>
+    <li>
+	<div class="slide-content">
+    	<img src="../img/kkul_Wallet.png" alt="Image 2" id="img">
+			<h2>멍충망충 와따뀰 카드지갑</h2>
+			<p>#개성만점 #유니크 #니트지갑</p>
+    </div>    
+    </li>
+    <li>
+	<div class="slide-content">
+    	<img src="../img/snow_princess.png" alt="Image 3" id="img">
+			<h2>백설공주 반려동물 케이프</h2>
+			<p>#거울아 거울아 누가 제일 예쁘니</p>
+    </div>    
+    </li>
+    <li>
+	<div class="slide-content">
+    	<img src="../img/Tropical.png" alt="Image 4" id="img">
+			<h2>트로피컬 파라다이스 헤어핀</h2>
+			<p>#소녀감성 #어린이핀 #집게핀</p>
+    </div>    
+    </li>
+    <li>
+ 	<div class="slide-content">
+   		<img src="../img/tulip_wallet.png" alt="Image 5" id="img">
+			<h2>통통 튤립 카드지갑</h2>
+			<p>#폭닥폭닥 #소녀감성 #뜨개지갑</p>
+    </div>   
+    </li>
+    <li>
+	<div class="slide-content">
+    	<img src="../img/Romance.png" alt="Image 6" id="img">
+			<h2>로망스 반려동물 케이프</h2>
+			<p>#꽃내음풀풀 #러블리 #살랑살랑
+			</p>
+    </div>    
+    </li>
+  </ul> 
+  <p class="controller">
+  <span class="prev">&lang;</span>  
+  <span class="next">&rang;</span>
+  </p>
 </div>
-
-<h1 id="heading">베스트화면</h1>
-
-<script type="text/javascript">
-	const slides = document.querySelector('.slides');
-	const prevBtn = document.getElementById('prevBtn');
-	const nextBtn = document.getElementById('nextBtn');
-	let currentIndex = 0;
-
-	function moveToSlide(index) {
-		const slideWidth = 400; // 이미지 너비가 400px인 경우
-		slides.style.transform = `translateX(-${index * slideWidth}px)`;
-	}
-
-
-	prevBtn.addEventListener('click', () => {
-  		currentIndex = (currentIndex - 1) % 3; // 이미지 개수에 따라 순환
-  		moveToSlide(currentIndex);
-	});
-
-	nextBtn.addEventListener('click', () => {
-		currentIndex = (currentIndex + 1) % 3;
-		moveToSlide(currentIndex);
-	});
-</script>
+<script src="js/slideShow.js"></script>
 </body>
 </html>
