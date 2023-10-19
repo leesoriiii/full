@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="jakarta.tags.core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -122,6 +123,6 @@ body {
 		<div class="base bottom">Login</div>
 	</article>
 </section>
-<h1 id="heading">뽀삐와칭구들화면</h1>
+<h1 id="heading">시즌!</h1>
 </body>
 </html>
