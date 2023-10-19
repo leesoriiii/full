@@ -14,6 +14,7 @@
 </div>
 <div class="slideshow-container">
 <div class="slide-container">
+<div>
   <div class="slide1">
     <img src="/img(list)/kkul_Wallet1.png" alt="Kkul Image 1">
   </div>
@@ -23,6 +24,9 @@
   <div class="slide1">
     <img src="/img(list)/kkul_Wallet3.png" alt="Kkul Image 3">
   </div>
+  <p id = textName>첫번째 설명</p>
+</div>
+<div>
   <div class="slide2">
     <img src="/img(list)/julmi1.png" alt="julmi Image 1">
   </div>
@@ -38,6 +42,8 @@
   <div class="slide2">
     <img src="/img(list)/julmi5.png" alt="julmi Image 5">
   </div>
+<p id = textName>두번째 설명</p>
+</div>
   <div class="slide3">
     <img src="/img(list)/kkul_doll1.png" alt="kkul_doll Image 1">
   </div>
@@ -51,6 +57,24 @@
     <img src="/img(list)/bbobby_doll2.png" alt="bbobby_doll Image 2">
   </div>
   <div class="slide4">
+    <img src="/img(list)/bbobby_doll3.png" alt="bbobby_doll Image 3">
+  </div>
+  <div class="slide5">
+    <img src="/img(list)/bbobby_doll1.png" alt="bbobby_doll Image 1">
+  </div>
+  <div class="slide5">
+    <img src="/img(list)/bbobby_doll2.png" alt="bbobby_doll Image 2">
+  </div>
+  <div class="slide5">
+    <img src="/img(list)/bbobby_doll3.png" alt="bbobby_doll Image 3">
+  </div>
+  <div class="slide6">
+    <img src="/img(list)/bbobby_doll1.png" alt="bbobby_doll Image 1">
+  </div>
+  <div class="slide6">
+    <img src="/img(list)/bbobby_doll2.png" alt="bbobby_doll Image 2">
+  </div>
+  <div class="slide6">
     <img src="/img(list)/bbobby_doll3.png" alt="bbobby_doll Image 3">
   </div>
 </div> 

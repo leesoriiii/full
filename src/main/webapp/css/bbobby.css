@@ -25,9 +25,15 @@ p {
 	font-weight: bold;
 	
 }
+#textName {
+	color:white; 
+	font-size: 20px;
+	
+}
 img {
 	width: 300px;
 	height: auto;
+	margin-bottom: -20px;
 }
 hr {
   border: none; /* 기본 테두리 제거 */
@@ -44,20 +50,22 @@ hr {
 }
 #header {
 	padding-top: 50px;
-	width: 120%;
+	width: 115%;
 	padding-left: 20%;
 }
 .slideshow-container { /*슬라이드가 표시되는 전체 영역*/
 	background-color: #000000	;
-	width: 100%;
+	width: 95%;
  	position: relative;
-	margin: 0 auto;
+	
 	margin-left: 0;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
-	align-items: center;
+	
 	overflow: hidden; /* 슬라이드 바깥 부분을 숨김 */
+	align-items: flex-start; /* 윗줄부터 정렬 */
+	height: 700px;
 }
 .slide-container {
 	width: 50%;
@@ -70,7 +78,9 @@ hr {
 .slide-container .slide1,
 .slide-container .slide2,
 .slide-container .slide3,
-.slide-container .slide4 {
+.slide-container .slide4,
+.slide-container .slide5,
+.slide-container .slide6 {
 	
 	width: 1000%; /* 슬라이드 너비 설정 */
 	margin-right: 20px;
