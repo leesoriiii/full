@@ -1,0 +1,148 @@
+@charset "UTF-8";
+@font-face {
+    font-family: 'Orbit-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2310@1.0/Orbit-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face{
+font-family:'DNFBitBitv2';
+font-style:normal;font-weight:400;src:url('//cdn.df.nexon.com/img/common/font/DNFBitBitv2.otf')format('opentype')}
+
+
+body {
+	
+	margin-top: 50px;
+	margin-left: 50px;
+	background-color: #FCDEAB;
+	display: flex;
+ 	flex-direction: column;
+	justify-content: center;
+    align-items: center;
+}
+p {
+	
+	font-family: 'Orbit-Regular';
+	font-weight: bold;
+	
+}
+h1 {
+	text-align: center;
+	
+}
+.product-name {
+	color:  white;  
+	text-shadow: 1px 1px 2px#f38400;
+	font-size: 17px;
+}
+.price {
+	padding-right: 20px;
+	margin-bottom: -42px; /*제품명과 금액 텍스트 높이 맞추기*/
+	text-align: right;
+	color:#f38400; 
+	text-shadow: 1px 1px 2px white;
+	font-size: 17px;
+}
+.price2 {
+	padding-right: 3px;
+	margin-bottom: -42px; /*제품명과 금액 텍스트 높이 맞추기*/
+	text-align: right;
+	color:#f38400; 
+	text-shadow: 1px 1px 2px white;
+	font-size: 17px;
+}
+img {
+	width: 300px;
+	height: auto;
+	margin-bottom: -20px;
+}
+hr {
+  border: none; /* 기본 테두리 제거 */
+  border-top: 3px dotted #ffffff; 
+  width: 83%; /* 가로 너비 */
+  margin: 5px 0; /* 위아래 여백 추가 (선택적) */
+  margin-bottom: 30px;
+}
+#header {
+	padding-top: 0px;
+	width: 116%;
+	padding-left: 20%;
+}
+.slideshow-container, .slideshow-container2 { /*슬라이드가 표시되는 전체 영역*/
+	width: 95%;
+ 	height: 430px;
+ 	position: relative;
+	margin-left: 0;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	overflow: hidden; /* 슬라이드 바깥 부분을 숨김 */
+	align-items: flex-start; /* 윗줄부터 정렬 */
+	transition: transform 0.5s; 
+}
+.slide-container, .slide-container2 {/*슬라이드 움직임 설정?*/
+	transition: transform 0.5s; 
+	display: flex;
+}
+.slide1, .slide2, .slide3, .slide4, .slide5
+ {
+	width: 100%; /* 슬라이드 너비 설정 */
+	margin-right: 20px;
+}
+.line2Slide1, .line2Slide2, .line2Slide3, .line2Slide4, .line2Slide5
+ {
+	width: 100%; /* 슬라이드 너비 설정 */
+	margin-right: 20px;
+}
+.slide6 .line2Slide6 {
+	padding-right: 0px;
+}
+
+.prev, .next {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	cursor: pointer;
+	font-size: 20px;
+	padding: 10px;
+	background-color: #fba720;
+	color: white;
+	transition: background-color 0.3s;
+}
+.prev {
+	left: 0;
+}
+
+.next {
+	right: 0;
+}
+
+
+.prev:hover, .next:hover {
+  background-color:#f38400; /* 마우스 호버 시 배경색 변경 */
+  color:  #ffffff;
+}
+
+.prev2, .next2 {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	cursor: pointer;
+	font-size: 20px;
+	padding: 10px;
+	background-color: #fba720;
+	color: white;
+	transition: background-color 0.3s;
+}
+.prev2 {
+	left: 0;
+}
+
+.next2 {
+	right: 0;
+}
+
+.prev2:hover, .next2:hover {
+  background-color:#f38400; /* 마우스 호버 시 배경색 변경 */
+  color:  #ffffff;
+}

@@ -103,6 +103,7 @@
 	</div>
 		<div id="header">
 		<hr>
+		<p><br><br><br><br><br><br><br></p>
 	</div>
 	<script src="../js/bbobby_slideShow.js"></script>
 </body>

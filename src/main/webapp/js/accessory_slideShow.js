@@ -13,14 +13,14 @@ const slideWidth = slideContainer.offsetWidth / 6; // 슬라이드 하나의 너
 
   slides[slideIndex].style.display = 'block';
 
-  // 2초마다 이미지 전환
+  // 1초마다 이미지 전환
   setTimeout(function () {
     slideIndex++;
     if (slideIndex >= slides.length) {
       slideIndex = 0;
     }
     showSlides(slideIndex);
-  }, 2000);
+  }, 1000);
 }
 	
 function plusSlides(n) {
@@ -44,6 +44,16 @@ function plusSlides(n) {
   slideIndex = Math.abs(currentPosition / slideWidth);
    
    
+ /* let currentPosition = -slideWidth * slideIndex + n * slideWidth;
+  slideContainer.style.transform = `translateX(${currentPosition}px)`;
+
+  slideIndex += n;
+
+  if (slideIndex >= slides.length) {
+    slideIndex = 0;
+  } else if (slideIndex < 0) {
+    slideIndex = slides.length - 1;
+  }*/
 }
 	
 // 두번째 슬라이드
@@ -60,7 +70,7 @@ function showSlides2() {
     slideIndex2 = 0;
   }
   slides[slideIndex2].style.display = 'block';
-  setTimeout(showSlides2, 2000); // 2초마다 이미지 전환
+  setTimeout(showSlides2, 1000); // 1초마다 이미지 전환
 }
   
 // 세번째 슬라이드
@@ -77,7 +87,7 @@ function showSlides3() {
     slideIndex3 = 0;
   }
   slides[slideIndex3].style.display = 'block';
-  setTimeout(showSlides3, 2000); // 2초마다 이미지 전환
+  setTimeout(showSlides3, 1000); // 1초마다 이미지 전환
 }
   
 //네번째 슬라이드
@@ -94,7 +104,7 @@ function showSlides4() {
     slideIndex4 = 0;
   }
   slides[slideIndex4].style.display = 'block';
-  setTimeout(showSlides4, 2000); // 2초마다 이미지 전환
+  setTimeout(showSlides4, 1000); // 1초마다 이미지 전환
 }
 
 //다섯번째 슬라이드
@@ -111,7 +121,7 @@ function showSlides5() {
     slideIndex5 = 0;
   }
   slides[slideIndex5].style.display = 'block';
-  setTimeout(showSlides5, 2000); // 2초마다 이미지 전환
+  setTimeout(showSlides5, 1000); // 1초마다 이미지 전환
 }
 //여섯번째 슬라이드
   let slideIndex6 = 0;
@@ -127,5 +137,5 @@ function showSlides6() {
     slideIndex6 = 0;
   }
   slides[slideIndex6].style.display = 'block';
-  setTimeout(showSlides6, 2000); // 2초마다 이미지 전환
+  setTimeout(showSlides6, 1000); // 1초마다 이미지 전환
 }
