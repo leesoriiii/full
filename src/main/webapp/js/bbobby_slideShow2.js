@@ -1,6 +1,6 @@
 let slides;
 let slideIndex = 0; // 현재 슬라이드 인덱스
-const slideWidth =73; // 슬라이드버튼을 누를때 이동하는길이 (단위: px)
+const slideWidth =100; // 슬라이드버튼을 누를때 이동하는길이 (단위: px)
 showSlides(slideIndex); // 페이지 로드 시 첫 번째 슬라이드 표시
 
 function showSlides(slideIndex) {

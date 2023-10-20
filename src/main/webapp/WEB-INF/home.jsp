@@ -158,7 +158,7 @@ iframe {
 		</a>
 	</li>
 	<li class="menu-item">
-		<a href="/title/bbobby" target="content" style="text-decoration: none;">
+		<a href="bbobby.jsp" target="content" style="text-decoration: none;">
 			<div class="menu-title">뽀삐와칭구들</div>
 		</a>
 		<ol class="sub-menu">
@@ -197,7 +197,7 @@ iframe {
 	</li>
 </ul>
 </nav>
-<iframe src="../bbobby.jsp"
+<iframe src="../main.jsp"
 		name="content"
 		width="100%"
 		scrolling="no"

@@ -11,7 +11,7 @@ font-style:normal;font-weight:400;src:url('//cdn.df.nexon.com/img/common/font/DN
 
 
 body {
-	margin-top: 100px;
+	margin-top: 150px;
 	margin-left: 50px;
 	background-color: #FCDEAB;
 	display: flex;
@@ -25,10 +25,27 @@ p {
 	font-weight: bold;
 	
 }
-#textName {
-	color:white; 
-	font-size: 20px;
+#productName {
+		color:  white;  
+	text-shadow: 1px 1px 2px#f38400;
 	
+	font-size: 17px;
+}
+#Price {
+	padding-right: 20px;
+	margin-bottom: -42px; /*제품명과 금액 텍스트 높이 맞추기*/
+	text-align: right;
+	color:#f38400; 
+	text-shadow: 1px 1px 2px white;
+	font-size: 17px;
+}
+#Price2 {
+	padding-right: 3px;
+	margin-bottom: -42px; /*제품명과 금액 텍스트 높이 맞추기*/
+	text-align: right;
+	color:#f38400; 
+	text-shadow: 1px 1px 2px white;
+	font-size: 17px;
 }
 img {
 	width: 300px;
@@ -40,35 +57,26 @@ hr {
   border-top: 3px dotted #ffffff; 
   width: 83%; /* 가로 너비 */
   margin: 5px 0; /* 위아래 여백 추가 (선택적) */
-}
-#heading{
-	font-family:'DNFBitBitv2';
-	margin: 150px;
-	color: white;
-    font-size: 80px;
-    text-shadow: 2px 2px #f19292;
+  margin-bottom: 30px;
 }
 #header {
-	padding-top: 50px;
-	width: 115%;
+	padding-top: 0px;
+	width: 116%;
 	padding-left: 20%;
 }
 .slideshow-container { /*슬라이드가 표시되는 전체 영역*/
-	background-color: #000000	;
 	width: 95%;
  	position: relative;
-	
 	margin-left: 0;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
-	
 	overflow: hidden; /* 슬라이드 바깥 부분을 숨김 */
 	align-items: flex-start; /* 윗줄부터 정렬 */
-	height: 700px;
+	height: 430px;
 }
 .slide-container {
-	width: 50%;
+	width: 100%;
 	display: flex;
 	flex-direction: row;
 	position: relative;
@@ -79,11 +87,15 @@ hr {
 .slide-container .slide2,
 .slide-container .slide3,
 .slide-container .slide4,
-.slide-container .slide5,
-.slide-container .slide6 {
+.slide-container .slide5
+ {
 	
-	width: 1000%; /* 슬라이드 너비 설정 */
+	width: 100%; /* 슬라이드 너비 설정 */
 	margin-right: 20px;
+}
+.slide6 {
+	
+	padding-right: -50px;
 }
 
 .prev, .next {
@@ -95,6 +107,7 @@ hr {
 	padding: 10px;
 	background-color: #fba720;
 	color: white;
+	transition: background-color 0.3s;
 }
 .prev {
 	left: 0;
@@ -102,4 +115,9 @@ hr {
 
 .next {
 	right: 0;
+}
+
+.prev:hover, .next:hover {
+  background-color:#f38400; /* 마우스 호버 시 배경색 변경 */
+  color:  #ffffff;
 }
