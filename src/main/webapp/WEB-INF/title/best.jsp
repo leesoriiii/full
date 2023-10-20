@@ -6,7 +6,7 @@
 <head>
 <meta charset="UTF-8">
 <title>best.jsp</title>
-<link rel="stylesheet" href="css/best.css">
+<link rel="stylesheet" href="../css/best.css">
 </head>
 <body>
 <h1 id="heading">BEST</h1>
@@ -62,6 +62,6 @@
   <span class="next">&rang;</span>
   </p>
 </div>
-<script src="js/best_slideShow.js"></script>
+<script src="../js/best_slideShow.js"></script>
 </body>
 </html>

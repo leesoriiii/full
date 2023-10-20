@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Bbobby.jsp</title>
-<link rel="stylesheet" href="css/bbobby.css">
+<link rel="stylesheet" href="../css/bbobby.css">
 </head>
 <body>
 	<div id="header">
@@ -104,6 +104,6 @@
 		<div id="header">
 		<hr>
 	</div>
-	<script src="js/bbobby_slideShow.js"></script>
+	<script src="../js/bbobby_slideShow.js"></script>
 </body>
 </html>

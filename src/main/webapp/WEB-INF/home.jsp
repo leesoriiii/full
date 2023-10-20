@@ -153,12 +153,12 @@ iframe {
 		</section>
 	</li>
 	<li class="menu-item">
-		<a href="best.jsp" target="content" style="text-decoration: none;">
+		<a href="/title/best" target="content" style="text-decoration: none;">
 			<div class="menu-title">베스트</div>
 		</a>
 	</li>
 	<li class="menu-item">
-		<a href="bbobby.jsp" target="content" style="text-decoration: none;">
+		<a href="/title/bbobby" target="content" style="text-decoration: none;">
 			<div class="menu-title">뽀삐와칭구들</div>
 		</a>
 		<ol class="sub-menu">
