@@ -73,7 +73,7 @@ hr {
 	justify-content: space-between;
 	overflow: hidden; /* 슬라이드 바깥 부분을 숨김 */
 	align-items: flex-start; /* 윗줄부터 정렬 */
-	height: 430px;
+	height: 1500px;
 }
 .slide-container {
 	width: 100%;
@@ -98,26 +98,3 @@ hr {
 	padding-right: -50px;
 }
 
-.prev, .next {
-	position: absolute;
-	top: 50%;
-	transform: translateY(-50%);
-	cursor: pointer;
-	font-size: 20px;
-	padding: 10px;
-	background-color: #fba720;
-	color: white;
-	transition: background-color 0.3s;
-}
-.prev {
-	left: 0;
-}
-
-.next {
-	right: 0;
-}
-
-.prev:hover, .next:hover {
-  background-color:#f38400; /* 마우스 호버 시 배경색 변경 */
-  color:  #ffffff;
-}

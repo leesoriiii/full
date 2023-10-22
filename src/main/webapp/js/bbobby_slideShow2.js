@@ -1,20 +1,50 @@
-// 두번째 슬라이드
-let slideIndex1 = 0;
-showSlides1();
+let slides;
+let slideIndex = 0; // 현재 슬라이드 인덱스
+const slideWidth =73; // 슬라이드버튼을 누를때 이동하는길이 (단위: px)
+showSlides(slideIndex); // 페이지 로드 시 첫 번째 슬라이드 표시
 
-function showSlides1() {
-  let slides = document.querySelectorAll('.slide1');
+function showSlides(slideIndex) {
+const slideContainer = document.querySelector('.slide-container');
+const slideWidth = slideContainer.offsetWidth / 6; // 슬라이드 하나의 너비 계산
+ slides = document.querySelectorAll('.slide1');
   for (let i = 0; i < slides.length; i++) {
     slides[i].style.display = 'none';
   }
-  slideIndex1++;
-  if (slideIndex1 >= slides.length) {
-    slideIndex1 = 0;
-  }
-  slides[slideIndex1].style.display = 'block';
-  setTimeout(showSlides1, 2000); // 2초마다 이미지 전환
+
+  slides[slideIndex].style.display = 'block';
+
+  // 2초마다 이미지 전환
+  setTimeout(function () {
+    slideIndex++;
+    if (slideIndex >= slides.length) {
+      slideIndex = 0;
+    }
+    showSlides(slideIndex);
+  }, 2000);
 }
-  
+	
+function plusSlides(n) {
+   const slideContainer = document.querySelector('.slide-container');
+   let currentPosition = parseInt(slideContainer.style.transform.slice(11, -3)) || 0;
+
+  // 슬라이드 이동
+  currentPosition += n * slideWidth;
+
+  // 슬라이드가 마지막 슬라이드를 넘어가면 처음으로 돌아가도록 설정
+  if (currentPosition > 0) {
+    currentPosition = -(slides.length - 1) * slideWidth;
+  } else if (currentPosition < -(slides.length - 1) * slideWidth) {
+    currentPosition = 0;
+  }
+
+  // 슬라이드 이동
+  slideContainer.style.transform = `translateX(${currentPosition}px)`;
+
+  // 슬라이드 인덱스 업데이트
+  slideIndex = Math.abs(currentPosition / slideWidth);
+   
+   
+}
 	
 // 두번째 슬라이드
 let slideIndex2 = 0;
