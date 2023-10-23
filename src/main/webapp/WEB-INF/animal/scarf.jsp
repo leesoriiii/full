@@ -1,128 +1,131 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="jakarta.tags.core" %>
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>cube.jsp</title>
-<style type="text/css">
-@font-face{
-font-family:'DNFBitBitv2';
-font-style:normal;font-weight:400;src:url('//cdn.df.nexon.com/img/common/font/DNFBitBitv2.otf')format('opentype')}
-div { 
-	color: #ffffff;
-}
-body {
-	margin: 100px;
-	background-color: #FCDEAB;
-	display: flex;
- 	flex-direction: column;
-    justify-content: center;
-	justify-content: center;
-    align-items: center;
-}
-.perspective {
-/* 	border: 10px solid green; */
- 	display: inline-block;
-	margin: 100px 0px 0px 100px;
-	
-	perspective: 500px;
-}
-
-.cube {
-	width: 250px; /* 현재 크기의 5배 */
-	height: 250px; /* 현재 크기의 5배 */
-	font-size: 2.5em; /* 텍스트 크기를 큐브 크기에 맞게 조절 (50px * 5) */
-	line-height: 250px; /* 큐브 크기에 맞게 조절 */
- 	display: inline-block;
-	
-   	transform-style: preserve-3d;
-
-/* 	transform: rotateX(45deg); */
-	animation: rotate 10s infinite linear;
-}
-
-.base {
-/* 	border:10px solid red; */
-	width: 250px;
-	height: 250px;
-	font-size: 0.5em;
-	text-align: center;
-	line-height: 250px;
-}
-
-.front, .back, .left, .right, .top, .bottom {
-	position: absolute;
-	top: 0px;
-	left: 0px;
-	
-	opacity: 0.9;
-	box-shadow: 0px 0px 50px 5px #f19292;
-}
-
-
-.front {
-  transform: translateZ(125px); /* 기존 25px 대신 125px */
-  background: #f19292;
-}
-
-.back {
-  transform: rotateY(450deg) translateZ(125px); /* 기존 125px 대신 625px */
-  background: #ffffff;
-}
-
-.left {
-  transform: rotateY(-90deg) translateZ(125px); /* 기존 25px 대신 125px */
-  background: #FFEA7B;
-}
-
-.right {
-  transform: rotateY(90deg) translateZ(125px); /* 기존 25px 대신 125px */
-  background: #B7FF96;
- 
-}
-
-.top {
-  transform: rotateX(90deg) translateZ(125px); /* 기존 25px 대신 125px */
-  background: #41E9FF;
-}
-
-.bottom {
-  transform: rotateX(-90deg) translateZ(125px); /* 기존 25px 대신 125px */
-  background: #B17AFF;
-}
-#heading{
-	font-family:'DNFBitBitv2';
-	margin: 150px;
-	color: white;
-    font-size: 80px;
-    text-shadow: 2px 2px #f19292;
-}
-@keyframes rotate {
-	from {
-		transform: rotateX(0deg) rotateY(360deg) rotateZ(0deg);
-	}
-	to {
-		transform: rotateX(360deg) rotateY(0deg) rotateZ(360deg);
-	}
-}
-
-</style>
+<title>scarf.jsp</title>
+<link rel="stylesheet" href="../css/animal_scarf.css">
 </head>
 <body>
-<hr>
-<section class="perspective">
-	<article class="cube">
-		<div class="base">이소리</div>
-		<div class="base front">Alpha</div>
-		<div class="base back">Animation</div>
-		<div class="base left">React</div>
-		<div class="base right">Employee</div>
-		<div class="base top">City</div>
-		<div class="base bottom">Login</div>
-	</article>
-</section>
-<h1 id="heading">스카프</h1>
+	<h1>케이프</h1>
+	<div id="header">
+		<p id="list" style="margin-bottom: 0px; color: #FFFFFF;">
+			반려용품 > <span style="color: #f38400; text-decoration: underline;">케이프 </span>
+		</p>
+		<hr>
+		</div>
+		<div class="total-container">
+		<div class="slide-container">
+			<div class="slide_img_name1">
+				<div class="slide1">
+					<img src="/img(list)/kkul_Wallet1.png" alt="Kkul Image 1">
+				</div>
+				<div class="slide1">
+					<img src="/img(list)/kkul_Wallet2.png" alt="Kkul Image 2">
+				</div>
+				<div class="slide1">
+					<img src="/img(list)/kkul_Wallet3.png" alt="Kkul Image 3">
+				</div>
+				<p class="product-name">
+					멍퉁망퉁 와따뀰 카드지갑<br>폭닥폭닥 개성만점 니트지갑
+				</p>
+				<p class="price">￦23,000</p>
+			</div>
+			<div class="slide_img_name2">
+				<div class="slide2">
+					<img src="/img(list)/julmi1.png" alt="julmi Image 1">
+				</div>
+				<div class="slide2">
+					<img src="/img(list)/julmi2.png" alt="julmi Image 2">
+				</div>
+				<div class="slide2">
+					<img src="/img(list)/julmi3.png" alt="julmi Image 3">
+				</div>
+				<div class="slide2">
+					<img src="/img(list)/julmi4.png" alt="julmi Image 4">
+				</div>
+				<div class="slide2">
+					<img src="/img(list)/julmi5.png" alt="julmi Image 5">
+				</div>
+				<p class="product-name">
+					나만의 작은 애착인형 절미<br>키링 스마트톡 핸드폰고리
+				</p>
+				<p class="price">￦8,000</p>
+			</div>
+			<div class="slide_img_name3">
+				<div class="slide3">
+					<img src="/img(list)/kkul_doll1.png" alt="kkul_doll Image 1">
+				</div>
+				<div class="slide3">
+					<img src="/img(list)/kkul_doll2.png" alt="kkul_doll Image 2">
+				</div>
+				<p class="product-name">
+					멍퉁망퉁 와따뀰 키덜트 인형<br>볼빵빵 키링 핸드메이드 애착인형
+				</p>
+				<p class="price">￦42,000</p>
+			</div>
+		</div>
+	
+	<div class="slide-container2">
+		<div class="line2slide_img_name1">
+			<div class="line2Slide1">
+				<img src="/img(list)/bbobby_doll1.png" alt="bbobby_doll Image 1">
+			</div>
+			<div class="line2Slide1">
+				<img src="/img(list)/bbobby_doll2.png" alt="bbobby_doll Image 2">
+			</div>
+			<div class="line2Slide1">
+				<img src="/img(list)/bbobby_doll3.png" alt="bbobby_doll Image 3">
+			</div>
+			<p class="product-name">
+				단 하나뿐인 나만의 뽀삐<br>키링 핸드메이드 애착인형
+			</p>
+			<p class="price">￦49,000</p>
+		</div>
+		<div class="line2slide_img_name2">
+			<div class="line2Slide2">
+				<img src="/img(list)/bbobby_Pods1.png" alt="bbobby_Pods Image 1">
+			</div>
+			<div class="line2Slide2">
+				<img src="/img(list)/bbobby_Pods2.png" alt="bbobby_Pods Image 2">
+			</div>
+			<div class="line2Slide2">
+				<img src="/img(list)/bbobby_Pods3.png" alt="bbobby_Pods Image 3">
+			</div>
+			<div class="line2Slide2">
+				<img src="/img(list)/bbobby_Pods4.png" alt="bbobby_Pods Image 3">
+			</div>
+			<p class="product-name">
+				사막여우 뽀삐 케이스<br>기본형 인형 에어팟 프로 버즈
+			</p>
+			<p class="price">￦38,000</p>
+		</div>
+		<div class="line2slide_img_name3">
+			<div class="line2Slide3">
+				<img src="/img(list)/kkul_Tok1.png" alt="kkul_Tok Image 1">
+			</div>
+			<div class="line2Slide3">
+				<img src="/img(list)/kkul_Tok2.png" alt="kkul_Tok Image 2">
+			</div>
+			<p class="product-name">
+				멍퉁망퉁 뽀글뽀글 와따뀰<br>키링 스마트톡 핸드폰고리
+			</p>
+			<p class="price">￦6,000</p>
+		</div>
+	</div>
+	</div>
+	<div id="header">
+		<hr>
+		<p style="margin-left:10px; font-size: 14px; font-weight: bold; color: white;">가득샵<br>
+		<span id="Business" style="font-size: 12px;">
+		상호명: 가득샵 | 대표: 이소리<br>
+		사업자등록번호: 372-05-02494 | 통신판매업 2022-인천계양-0631<br>
+		주소: 인천광역시 계양구 경명대로 1058, 302-1336호(계산동)
+		</span>
+		</p>
+	</div>
+	<script src="../js/animal_scarf_slideShow.js"></script>
+	
 </body>
 </html>

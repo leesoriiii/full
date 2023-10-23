@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@taglib prefix="sec" uri="http://www.springframework.org/security/tags"%>  
 <!DOCTYPE html>
 <html>
 <head>
@@ -151,6 +152,8 @@ function resize() {
 </script>
 </head>
 <body>
+
+
 <nav style="backgroundcolor: white">
 <ul class="menu">
 	<li>
@@ -173,11 +176,6 @@ function resize() {
 		<a href="/title/bbobby" target="content" style="text-decoration: none;">
 			<div class="menu-title">뽀삐와칭구들</div>
 		</a>
-		<ol class="sub-menu">
-			<li class="sub-menu-item"><a target="content" href="/bbobby/kidult_doll">키덜트인형</a></li>
-			<li class="sub-menu-item"><a target="content" href="/bbobby/julmi">절미</a></li>
-			<li class="sub-menu-item"><a target="content" href="/bbobby/goods">굿즈상품</a></li>
-		</ol>
 	</li>
 	<li class="menu-item">
 		<a href="/title/accessory" target="content" style="text-decoration: none;">
@@ -186,7 +184,6 @@ function resize() {
 		<ol class="sub-menu">
 			<li class="sub-menu-item"><a target="content" href="/accessory/hairpin">헤어핀</a></li>
 			<li class="sub-menu-item"><a target="content" href="/accessory/smart_tok">스마트톡</a></li>
-			<li class="sub-menu-item"><a target="content" href="/accessory/givitz">지비츠</a></li>
 		</ol>
 	</li>
 	<li class="menu-item">
@@ -196,7 +193,6 @@ function resize() {
 		<ol class="sub-menu">
 			<li class="sub-menu-item"><a target="content" href="/animal/scarf">케이프</a></li>
 			<li class="sub-menu-item"><a target="content" href="/animal/accessory">악세사리</a></li>
-			<li class="sub-menu-item"><a target="content" href="/animal/season">시즌 제품</a></li>
 		</ol>
 	</li>
 	<li class="menu-item">

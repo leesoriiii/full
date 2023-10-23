@@ -1,3 +1,5 @@
+l
+
 let slides;
 let slideIndex = 0; // 현재 슬라이드 인덱스
 const slideWidth =73; // 슬라이드버튼을 누를때 이동하는길이 (단위: px)
@@ -13,48 +15,16 @@ const slideWidth = slideContainer.offsetWidth / 6; // 슬라이드 하나의 너
 
   slides[slideIndex].style.display = 'block';
 
-  // 1초마다 이미지 전환
+  // 2초마다 이미지 전환
   setTimeout(function () {
     slideIndex++;
     if (slideIndex >= slides.length) {
       slideIndex = 0;
     }
     showSlides(slideIndex);
-  }, 1000);
+  }, 2000);
 }
 	
-function plusSlides(n) {
-   const slideContainer = document.querySelector('.slide-container');
-   let currentPosition = parseInt(slideContainer.style.transform.slice(11, -3)) || 0;
-
-  // 슬라이드 이동
-  currentPosition += n * slideWidth;
-
-  // 슬라이드가 마지막 슬라이드를 넘어가면 처음으로 돌아가도록 설정
-  if (currentPosition > 0) {
-    currentPosition = -(slides.length - 1) * slideWidth;
-  } else if (currentPosition < -(slides.length - 1) * slideWidth) {
-    currentPosition = 0;
-  }
-
-  // 슬라이드 이동
-  slideContainer.style.transform = `translateX(${currentPosition}px)`;
-
-  // 슬라이드 인덱스 업데이트
-  slideIndex = Math.abs(currentPosition / slideWidth);
-   
-   
- /* let currentPosition = -slideWidth * slideIndex + n * slideWidth;
-  slideContainer.style.transform = `translateX(${currentPosition}px)`;
-
-  slideIndex += n;
-
-  if (slideIndex >= slides.length) {
-    slideIndex = 0;
-  } else if (slideIndex < 0) {
-    slideIndex = slides.length - 1;
-  }*/
-}
 	
 // 두번째 슬라이드
 let slideIndex2 = 0;
@@ -70,7 +40,7 @@ function showSlides2() {
     slideIndex2 = 0;
   }
   slides[slideIndex2].style.display = 'block';
-  setTimeout(showSlides2, 1000); // 1초마다 이미지 전환
+  setTimeout(showSlides2, 2000); // 2초마다 이미지 전환
 }
   
 // 세번째 슬라이드
@@ -87,55 +57,73 @@ function showSlides3() {
     slideIndex3 = 0;
   }
   slides[slideIndex3].style.display = 'block';
-  setTimeout(showSlides3, 1000); // 1초마다 이미지 전환
+  setTimeout(showSlides3, 2000); // 2초마다 이미지 전환
 }
   
-//네번째 슬라이드
- let slideIndex4 = 0;
-showSlides4();
 
-function showSlides4() {
-  let slides = document.querySelectorAll('.slide4');
-  for (let i = 0; i < slides.length; i++) {
-    slides[i].style.display = 'none';
+
+//////////////
+
+
+
+
+
+let slides2;
+twoshowSlides(slideIndex); // 페이지 로드 시 첫 번째 슬라이드 표시
+
+function twoshowSlides(slideIndex) {
+const slideContainer = document.querySelector('.slide-container2');
+const slideWidth = slideContainer.offsetWidth / 6; // 슬라이드 하나의 너비 계산
+ slides2 = document.querySelectorAll('.line2Slide1');
+ 
+  for (let i = 0; i < slides2.length; i++) {
+    slides2[i].style.display = 'none';
   }
-  slideIndex4++;
-  if (slideIndex4 >= slides.length) {
-    slideIndex4 = 0;
+
+  slides2[slideIndex].style.display = 'block';
+
+  // 2초마다 이미지 전환
+  setTimeout(function () {
+    slideIndex++;
+    if (slideIndex >= slides2.length) {
+      slideIndex = 0;
+    }
+    twoshowSlides(slideIndex);
+  }, 2000);
+}
+	
+	
+// 두번째 슬라이드
+let twoSlideIndex2 = 0;
+twoShowSlides2();
+
+function twoShowSlides2() {
+  let slides2 = document.querySelectorAll('.line2Slide2');
+  for (let i = 0; i < slides2.length; i++) {
+    slides2[i].style.display = 'none';
   }
-  slides[slideIndex4].style.display = 'block';
-  setTimeout(showSlides4, 1000); // 1초마다 이미지 전환
+  twoSlideIndex2++;
+  if (twoSlideIndex2 >= slides2.length) {
+    twoSlideIndex2 = 0;
+  }
+  slides2[twoSlideIndex2].style.display = 'block';
+  setTimeout(twoShowSlides2, 2000); // 2초마다 이미지 전환
+}
+// 세번째 슬라이드
+let twoSlideIndex3 = 0;
+twoShowSlides3();
+
+function twoShowSlides3() {
+  let slides2 = document.querySelectorAll('.line2Slide3');
+  for (let i = 0; i < slides2.length; i++) {
+    slides2[i].style.display = 'none';
+  }
+  twoSlideIndex3++;
+  if (twoSlideIndex3 >= slides2.length) {
+    twoSlideIndex3 = 0;
+  }
+  slides2[twoSlideIndex3].style.display = 'block';
+  setTimeout(twoShowSlides3, 2000); // 2초마다 이미지 전환
 }
 
-//다섯번째 슬라이드
- let slideIndex5 = 0;
-showSlides5();
 
-function showSlides5() {
-  let slides = document.querySelectorAll('.slide5');
-  for (let i = 0; i < slides.length; i++) {
-    slides[i].style.display = 'none';
-  }
-  slideIndex5++;
-  if (slideIndex5 >= slides.length) {
-    slideIndex5 = 0;
-  }
-  slides[slideIndex5].style.display = 'block';
-  setTimeout(showSlides5, 1000); // 1초마다 이미지 전환
-}
-//여섯번째 슬라이드
-  let slideIndex6 = 0;
-showSlides6();
-
-function showSlides6() {
-  let slides = document.querySelectorAll('.slide6');
-  for (let i = 0; i < slides.length; i++) {
-    slides[i].style.display = 'none';
-  }
-  slideIndex6++;
-  if (slideIndex6 >= slides.length) {
-    slideIndex6 = 0;
-  }
-  slides[slideIndex6].style.display = 'block';
-  setTimeout(showSlides6, 1000); // 1초마다 이미지 전환
-}

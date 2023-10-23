@@ -51,6 +51,7 @@ hr {
     text-shadow: 2px 2px #faa821;
     text-align: center;
 }
+
 p {
 	font-family: 'Dovemayo_gothic';
 	color: white;
@@ -76,6 +77,6 @@ p {
 				여러분들께도<br>
 				여러분들의 애정하는 존재에게도 선물이 될게요<br>
 </p>
-<p id="content2">매일 매순간, 행복하세요.</p>
+<p id="content2">매일 매순간, 행복하세요.<br><br><br></p>
 </body>
 </html>
