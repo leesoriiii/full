@@ -8,7 +8,7 @@
 <link rel="stylesheet" href="../css/bbobby.css">
 </head>
 <body>
-	<h1>뽀삐와칭구들</h1>
+	<h1 id=heading>뽀삐와칭구들</h1>
 	<div id="header">
 		<p id="list" style="margin-bottom: 0px; color: #FFFFFF;">
 			뽀삐와칭구들 > <span style="color: #f38400; text-decoration: underline;">전체</span>

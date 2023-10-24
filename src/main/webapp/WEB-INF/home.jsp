@@ -78,7 +78,7 @@
 }
 
 
-.menu-item:last-child {
+.menu-item:nth-last-child(2) {
 	margin-left: auto;
 	margin-right: 10px;
 }
@@ -200,9 +200,30 @@ function resize() {
 			<div class="menu-title">문의</div>
 		</a>
 	</li>
+	<sec:authorize access="isAnonymous()">
 	<li class="menu-item">
-		<div class="menu-title">Login</div>
+		<div class="menu-title">
+			<a href="/login" style="text-decoration: none; color: inherit;">Login</a> 
+		</div>
 	</li>
+	<li class="menu-item">
+		<div class="menu-title">
+			<a href="/register" style="text-decoration: none; color: inherit; margin-right: 5vw;">Register</a> 
+		</div>
+	</li>
+	</sec:authorize>
+	<sec:authorize access="isAuthenticated()">
+	<li class="menu-item">
+		<div class="menu-title">
+			<a href="/logout" style="text-decoration: none; color: inherit;">Logout</a>
+		</div>
+	</li>
+	<li class="menu-item">
+		<div class="menu-title">
+			<a href="/#"style="text-decoration: none; color: inherit; margin-right: 5vw;"><sec:authentication property="name" /></a>
+		</div>
+	</li>
+	</sec:authorize>
 </ul>
 </nav>
 <iframe src="../main.jsp"
