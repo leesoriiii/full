@@ -14,9 +14,11 @@
   <ul class="slides">
     <li>
     <div class="slide-content">
-    	<img src="../img/julmi.png" alt="Image 1" id="img">
+    	<a href="/details/julmi_details" target="content" style="text-decoration: none;"> 
+    		<img src="../img/julmi.png" alt="Image 1" id="img">
 			<h2>나만의 작은 애착인형 절미</h2>
 			<p class="tag">#애착인형 #키링 #그립톡 #핸드폰고리</p>
+		</a>
     </div>
     </li>
     <li>

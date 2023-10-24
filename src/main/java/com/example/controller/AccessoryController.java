@@ -20,11 +20,6 @@ import lombok.extern.slf4j.Slf4j;
 @RequestMapping("/accessory")
 @Controller
 public class AccessoryController {
-	@GetMapping("/givitz")
-	void givitz(Model model) {
-		log.info("givitz()...");
-		
-	}
 	
 	@GetMapping("/hairpin")
 	void hairpin(Model model) {

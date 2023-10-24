@@ -10,6 +10,12 @@
 <link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-gothic-eco.css" rel="stylesheet">
 <style type="text/css">
 @font-face {
+    font-family: 'ImcreSoojin';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.3/ImcreSoojin.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
     font-family: '양진체';
     src: url('https://cdn.jsdelivr.net/gh/supernovice-lab/font@0.9/yangjin.woff') format('woff');
     font-weight: normal;
@@ -41,6 +47,36 @@
 @font-face {
     font-family: 'Cafe24Ssurround';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24Ssurround.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Orbit-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2310@1.0/Orbit-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'HSSaemaul-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/HSSaemaul-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+     font-family: 'locus_sangsang';
+     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/locus_sangsang.woff') format('woff');
+     font-weight: normal;
+     font-style: normal;
+}
+@font-face {
+    font-family: 'EF_cucumbersalad';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2210-EF@1.0/EF_cucumbersalad.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'omyu_pretty';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-01@1.0/omyu_pretty.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
 }
@@ -78,7 +114,7 @@
 }
 
 
-.menu-item:nth-last-child(2) {
+.menu-item:last-child {
 	margin-left: auto;
 	margin-right: 10px;
 }
@@ -87,7 +123,7 @@
 	color: #83C3B5
 }
 .menu-title { /*상단메뉴 내용*/
-	font-family: 'Dovemayo_gothic';
+     font-family: 'Dovemayo_gothic';
 	padding: 15px;
 	font-size: 22px;
 	color: #FBA720;
@@ -111,7 +147,7 @@
 .sub-menu-item > a {
 	display: block;
 	padding: 10px;
-	font-size: 18px;
+	font-size: 17px;
 	text-decoration: none;
 	color: #FBA720;
 	
@@ -133,6 +169,18 @@ iframe {
 	padding: 10px;
 	width: 120px;
 }
+.custom-icon::before {
+    content: '\f007'; /* 아이콘 유니코드 */
+    font-family: FontAwesome; /* 원하는 폰트 패밀리 사용 */
+}
+#hello {
+	font-size: 14px;
+	color: white;
+}
+/* 아이콘 스타일링 */
+.custom-icon {
+    font-size: 24px; /* 크기 설정 */
+}
 
 </style>
 
@@ -150,83 +198,90 @@ function resize() {
 	setInterval(resize, 100);
 });*/
 </script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
 
 
-<nav style="backgroundcolor: white">
-<ul class="menu">
-	<li>
-		<section class="perspective">
-		<article class="cube">
-			<div class="base">
-			<a href="http://localhost:8081">
-			<img id="full_shap_logo" src="../img/full_shap_logo.png" alt="가득샵 로고">
+	<nav style="backgroundcolor: white">
+		<ul class="menu">
+			<li>
+				<section class="perspective">
+					<article class="cube">
+						<div class="base">
+							<a href="http://localhost:8081"> <img id="full_shap_logo"
+								src="../img/full_shap_logo.png" alt="가득샵 로고">
+							</a>
+						</div>
+					</article>
+				</section>
+			</li>
+			<li class="menu-item"><a href="/title/best" target="content"
+				style="text-decoration: none;">
+					<div class="menu-title">베스트</div>
+			</a></li>
+			<li class="menu-item"><a href="/title/bbobby" target="content"
+				style="text-decoration: none;">
+					<div class="menu-title">뽀삐와칭구들</div>
+			</a></li>
+			<li class="menu-item"><a href="/title/accessory"
+				target="content" style="text-decoration: none;">
+					<div class="menu-title">악세사리</div>
 			</a>
-			</div>
-		</article>
-		</section>
-	</li>
-	<li class="menu-item">
-		<a href="/title/best" target="content" style="text-decoration: none;">
-			<div class="menu-title">베스트</div>
-		</a>
-	</li>
-	<li class="menu-item">
-		<a href="/title/bbobby" target="content" style="text-decoration: none;">
-			<div class="menu-title">뽀삐와칭구들</div>
-		</a>
-	</li>
-	<li class="menu-item">
-		<a href="/title/accessory" target="content" style="text-decoration: none;">
-			<div class="menu-title">악세사리</div>
-		</a>
-		<ol class="sub-menu">
-			<li class="sub-menu-item"><a target="content" href="/accessory/hairpin">헤어핀</a></li>
-			<li class="sub-menu-item"><a target="content" href="/accessory/smart_tok">스마트톡</a></li>
-		</ol>
-	</li>
-	<li class="menu-item">
-		<a href="/title/animal" target="content" style="text-decoration: none;">
-			<div class="menu-title">반려용품</div>
-		</a>
-		<ol class="sub-menu">
-			<li class="sub-menu-item"><a target="content" href="/animal/scarf">케이프</a></li>
-			<li class="sub-menu-item"><a target="content" href="/animal/accessory">악세사리</a></li>
-		</ol>
-	</li>
-	<li class="menu-item">
-		<a href="cs.jsp" target="content" style="text-decoration: none;">
-			<div class="menu-title">문의</div>
-		</a>
-	</li>
-	<sec:authorize access="isAnonymous()">
-	<li class="menu-item">
-		<div class="menu-title">
-			<a href="/login" style="text-decoration: none; color: inherit;">Login</a> 
-		</div>
-	</li>
-	<li class="menu-item">
-		<div class="menu-title">
-			<a href="/register" style="text-decoration: none; color: inherit; margin-right: 5vw;">Register</a> 
-		</div>
-	</li>
-	</sec:authorize>
-	<sec:authorize access="isAuthenticated()">
-	<li class="menu-item">
-		<div class="menu-title">
-			<a href="/logout" style="text-decoration: none; color: inherit;">Logout</a>
-		</div>
-	</li>
-	<li class="menu-item">
-		<div class="menu-title">
-			<a href="/#"style="text-decoration: none; color: inherit; margin-right: 5vw;"><sec:authentication property="name" /></a>
-		</div>
-	</li>
-	</sec:authorize>
-</ul>
-</nav>
-<iframe src="../main.jsp"
+				<ol class="sub-menu">
+					<li class="sub-menu-item"><a target="content"
+						href="/accessory/hairpin">헤어핀</a></li>
+					<li class="sub-menu-item"><a target="content"
+						href="/accessory/smart_tok">스마트톡</a></li>
+				</ol></li>
+			<li class="menu-item"><a href="/title/animal" target="content"
+				style="text-decoration: none;">
+					<div class="menu-title">반려용품</div>
+			</a>
+				<ol class="sub-menu">
+					<li class="sub-menu-item"><a target="content"
+						href="/animal/scarf">케이프</a></li>
+					<li class="sub-menu-item"><a target="content"
+						href="/animal/accessory">악세사리</a></li>
+				</ol></li>
+			<li class="menu-item"><a href="cs.jsp" target="content"
+				style="text-decoration: none;">
+					<div class="menu-title">문의</div>
+			</a></li>
+			
+			
+			
+			<sec:authorize access="isAnonymous()">
+				<li class="menu-item">
+					<div class="menu-title">
+						<!-- 로그인 안했을때 마이메뉴 표시 -->
+						<div class="custom-icon"></div>
+					</div>
+					<ol class="sub-menu">
+					<li class="sub-menu-item"><a href="/login">로그인</a></li>
+				</ol>
+				</li>
+			</sec:authorize>
+			
+			<sec:authorize access="isAuthenticated()">
+				<li class="menu-item">
+					<div class="menu-title">
+						<!-- 로그인했을때 마이메뉴 표시 -->
+							<div class="custom-icon"></div>
+					</div>
+					<ol class="sub-menu">
+					<li><span id="hello"><sec:authentication property="name"/>님<br>반가워요</a></li></span>
+					<li class="sub-menu-item"><a target="content"
+						href="/accessory/hairpin">마이페이지</a></li>
+					<li class="sub-menu-item"><a target="content"
+						href="/accessory/smart_tok">장바구니</a></li>
+					<li class="sub-menu-item"><a href="/logout">로그아웃</a></li>
+				</ol>
+				</li>
+			</sec:authorize>
+		</ul>
+	</nav>
+	<iframe src="../main.jsp"
 		name="content"
 		width="100%"
 		scrolling="no"

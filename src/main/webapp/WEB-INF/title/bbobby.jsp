@@ -32,6 +32,7 @@
 				</p>
 				<p class="price">￦23,000</p>
 			</div>
+			<a href="/details/julmi_details" target="content" style="text-decoration: none;"> 
 			<div class="slide_img_name2">
 				<div class="slide2">
 					<img src="/img(list)/julmi1.png" alt="julmi Image 1">
@@ -53,6 +54,7 @@
 				</p>
 				<p class="price">￦8,000</p>
 			</div>
+			</a>
 			<div class="slide_img_name3">
 				<div class="slide3">
 					<img src="/img(list)/kkul_doll1.png" alt="kkul_doll Image 1">

@@ -11,6 +11,7 @@ section {
 	width: 50%;
 	margin: auto;
 }
+
 fieldset {
 	margin: 20px 0px;
 }
@@ -18,68 +19,110 @@ fieldset {
 input {
 	padding: 0.5em;
 }
-body {
-  display: grid;
-  place-items: center;
-  height: 100vh;
 
+body {
+	display: grid;
+	height: 90vh;
 }
+
 h1 {
 	text-align: center;
 }
+
 hr {
-  border: none; /* 기본 테두리 제거 */
-  border-top: 1px solid  #faa821; 
-  width: 81%; /* 가로 너비 */
-  margin-top: 20px;
-  margin-bottom: 20px;
+	border: none; /* 기본 테두리 제거 */
+	border-top: 2px solid #faa821;
+	width: 250px; /* 가로 너비 */
+	margin-top: 20px;
+	margin-bottom: 20px;
 }
+
 img {
 	display: block;
 	margin: 0 auto;
-}
-input {
-  display: block;
-  margin: 0 auto;
+	margin-bottom: 50px;
 }
 
+input {
+	display: block;
+	margin: 0 auto;
+}
+
+div {
+	text-align: center; /* 가운데 정렬 */
+	margin-bottom: 20px;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+#button {
+	width: 220px;
+	background-color: #FCDEAB;
+	border: 1px solid #FBA720;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: background-color 0.3s, border 0.3s;
+	color: #FBA720;
+	font-weight: bold;
+}
+
+#button:hover {
+	background-color: #FBA720;
+	border: 1px solid #FBA720;
+	color: #ffffff;
+}
+
+span {
+	display: block; /* 블록 수준 요소로 변경하여 다른 요소와 독립적으로 배치 */
+	text-align: center; /* 가운데 정렬 */
+	margin-top: 20px; /* 원하는 여백을 지정 */
+	font-size: 12px;
+}
+
+#id {
+	margin-bottom: 10px;
+}
+
+#id, #pw {
+	width: 200px;
+}
 </style>
- <script>
-    function clearValue(inputElement, defaultValue) {
-      if (inputElement.value === defaultValue) {
-        inputElement.value = '';
-      }
+<script>
+    function clearValue(inputElement) {
+      inputElement.placeholder = '';
     }
     
-    function restoreValue(inputElement, defaultValue) {
+    function restoreValue(inputElement) {
       if (inputElement.value === '') {
-        inputElement.value = defaultValue;
+        if (inputElement.id === 'id') {
+          inputElement.placeholder = '아이디를 입력해 주세요.';
+        } else if (inputElement.id === 'pw') {
+          inputElement.placeholder = '비밀번호를 입력해 주세요.';
+        }
       }
     }
-  </script>
+</script>
 </head>
 <body>
 	<section>
 		<a href="http://localhost:8081"> <img id="full_shap_logo"
 			src="../img/full_shap_logo.png" alt="가득샵 로고">
 		</a>
-		<hr>
-		<h1>로그인</h1>
 		<c:if test="${param.error == ''}">
 			<div>사용자 ID 또는 비밀번호를 확인 해 주세요</div>
 		</c:if>
 		<form action="/login" method="POST">
-			<input id="id" name="username" value="아이디를 입력 해 주세요."
-				onfocus="clearValue(this, '아이디를 입력 해 주세요.')"
-				onblur="restoreValue(this, '아이디를 입력 해 주세요.')"><br> <input
-				id="pw" name="password" value="비밀번호를 입력 해 주세요."
-				onfocus="clearValue(this, '비밀번호를 입력 해 주세요.')"
-				onblur="restoreValue(this, '비밀번호를 입력 해 주세요.')"><br> <input
-				type="submit" />
+			<input id="id" name="username" placeholder="아이디를 입력 해 주세요."
+				onfocus="clearValue(this)"
+				onblur="restoreValue(this)">
+				<input id="pw" name="password" type="password" placeholder="비밀번호를 입력 해 주세요."
+					onfocus="clearValue(this)"
+					onblur="restoreValue(this)"><br> 
+				<input id="button" type="submit" value="로그인"/>
 		</form>
 		<hr>
-	</section>
 	<span>회원가입 | 아이디 찾기 | 비밀번호 찾기</span>
+	</section>
 
 </body>
 </html>
