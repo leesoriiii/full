@@ -57,8 +57,6 @@ hr {
 /* 보여줄 구간의 높이와 넓이 설정 */
 #slideShow {
   /*전체 컨테이너*/
-  background-color: #000000;
-  margin-right : 300px; /*메인 이미지 조금 밀어서 오른쪽에 옵션 선택칸 여백 두기*/
   width: 500px;
   height: 380px;
   position: relative;
@@ -126,8 +124,8 @@ hr {
 .indicators {
   display: flex;
   justify-content: center; /* 가로로 가운데 정렬 */
-  margin-top: 20px; /* 슬라이드 아래에 여백 추가 */
-  margin-right: 300px;
+  margin-top: -40px; /* 슬라이드 아래에 여백 추가 */
+  margin-bottom: 50px; /* 슬라이드 아래에 여백 추가 */
 }
 
 .indicator {
@@ -143,6 +141,16 @@ hr {
 
 .indicator:hover {
   background-color: #faa821; /* 마우스를 올렸을 때 배경색 변경 (선택한 슬라이드에 따라 변경 가능) */
+}
+
+.indicator.active {
+  background-color: #faa821; /* 활성화 상태일 때 배경색 변경 */
+}
+.details {
+  right: 0;
+  transform: translateX(100%) translateY(100%);
+  width: 300px; /* 또는 적절한 값을 지정하세요 */
+    margin: 0;
 }
 
 h2 {

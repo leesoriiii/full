@@ -21,6 +21,7 @@ function makeClone() {
 function initfunction() {
 	slides.style.width = (slideWidth + slideMargin) * (slideCount + 2) + 'px';
 	slides.style.left = -(slideWidth + slideMargin) + 'px';
+	document.querySelector('.indicator').classList.add('active');
 }
 
 
@@ -56,7 +57,15 @@ next.addEventListener('click', function() {
 		currentIdx = -1;
 	}
 	currentIdx += 1;
+	
+	let indicators = document.querySelectorAll('.indicator');
+  indicators.forEach(indicator => {
+    indicator.classList.remove('active');
+  });
+  indicators[currentIdx].classList.add('active');
 });
+
+
 prev.addEventListener('click', function() {
 	//이전 버튼 눌렀을때
 	console.log(currentIdx);
@@ -72,6 +81,13 @@ prev.addEventListener('click', function() {
 		currentIdx = slideCount;
 	}
 	currentIdx -= 1;
+	
+	// 이미지가 클릭되었으므로, 인디케이터 활성 클래스 업데이트
+  let indicators = document.querySelectorAll('.indicator');
+  indicators.forEach(indicator => {
+    indicator.classList.remove('active');
+  });
+  indicators[currentIdx].classList.add('active');
 });
 
 
@@ -80,6 +96,17 @@ function moveSlide(index) {
   currentIdx = index; // 현재 슬라이드 인덱스를 업데이트합니다.
   slides.style.left = -(index + 1) * (slideWidth + slideMargin) + 'px';
   slides.style.transition = `${0.5}s ease-out`; // 슬라이드 이동 속도
+
+  // 인디케이터 버튼들을 모두 선택합니다.
+  let indicators = document.querySelectorAll('.indicator');
+
+  // 모든 인디케이터에서 활성 클래스를 제거합니다.
+  indicators.forEach(indicator => {
+    indicator.classList.remove('active');
+  });
+
+  // 현재 인디케이터에 활성 클래스를 추가합니다.
+  indicators[index].classList.add('active');
 }
 
 // 인디케이터 버튼에 이벤트 처리기를 추가합니다.
@@ -88,4 +115,6 @@ document.querySelectorAll('.indicator').forEach((indicator, index) => {
     moveSlide(index);
   });
 });
+
+
 
