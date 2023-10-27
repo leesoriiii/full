@@ -10,20 +10,35 @@
 </head>
 <body>
 <h1 id="heading">절미 상세페이지</h1>
+<div class="total">
 <div class="details">
-<h2>나만의 작은 애착인형 절미 키링 스마트톡 핸드폰고리 악세사리</h2>
+<h3>나만의 작은 애착인형 절미 <br>키링 스마트톡 핸드폰고리 악세사리</h3>
+<hr>
 8,000원(배송비 3,000원 주문시 결제)<br>
-버전
-스마트톡
-군번줄
-핸드폰고리
+<hr>
 
-외형
-기본(5cm)
-고양이(5cm) (+1,000원)
-토끼(5cm) (+1,000원)
-기본(8cm) (+2,000원)
-고양이(8cm) (+3,000원)
+<form action="주문처리.php" method="post">
+     <select name="version" id="version" onchange="showSelection()">
+        <option value="버전선택" selected>버전 선택</option>
+        <option value="스마트톡">스마트톡</option>
+        <option value="군번줄">군번줄</option>
+        <option value="핸드폰고리">핸드폰고리</option>
+    </select>
+    <select name="outer" id="outer" onchange="showSelection()">
+        <option value="외형선택" selected>외형 선택</option>
+        <option value="기본(5cm)" data-price="0">기본(5cm)</option>
+        <option value="고양이(5cm)" data-price="1000">고양이(5cm) (+1,000원)</option>
+        <option value="토끼(5cm)" data-price="1000">토끼(5cm) (+1,000원)</option>
+        <option value="기본(8cm)" data-price="2000">기본(8cm) (+2,000원)</option>
+        <option value="고양이(8cm)" data-price="3000">고양이(8cm) (+3,000원)</option>
+    </select>
+    <br><br>
+    
+    
+<div id="selected_options"></div>
+ <br>
+    <input type="submit" value="주문하기">
+</form>
 </div>
 <div id="slideShow">
   <ul class="slides">
@@ -74,7 +89,7 @@
   <button data-slide-index="4" class="indicator"></button>
   <button data-slide-index="5" class="indicator"></button>
 </div>
-
+</div>
 
 
 <hr>

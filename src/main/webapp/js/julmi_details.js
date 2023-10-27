@@ -117,4 +117,44 @@ document.querySelectorAll('.indicator').forEach((indicator, index) => {
 });
 
 
+//주문 옵션 재차 확인 불러오는 코드
+ function showSelection() {
+    var version = document.getElementById('version').value;
+    var outer = document.getElementById('outer').value;
+    var price = 8000;
 
+    if (version !== '버전선택' && outer !== '외형선택') {
+        var selectedOptions = document.getElementById('selected_options');
+        var newOption = document.createElement('div');
+
+        var optionPrice = parseInt(document.getElementById('outer').options[document.getElementById('outer').selectedIndex].dataset.price);
+
+        newOption.innerHTML = '버전: ' + version + ' / 외형: ' + outer + '<br><span id="amount">' + (price + optionPrice) + '원 </span><input type="button" value="&lt;" onclick="changeQuantity(-1)"> <span id="quantity">1</span> <input type="button" value="&gt;" onclick="changeQuantity(1)"><hr>';
+        newOption.style.textAlign = 'right';
+        selectedOptions.appendChild(newOption);
+
+        // 옵션 선택란 초기화
+        document.getElementById('version').value = '버전선택';
+        document.getElementById('outer').value = '외형선택';
+
+        // 수량 초기화
+        document.getElementById('quantity').innerText = '1';
+        document.getElementById('amount').innerText = (price + optionPrice) + '원';
+    }
+}
+function changeQuantity(value) {
+    var quantityElement = document.getElementById('quantity');
+    var currentQuantity = parseInt(quantityElement.innerText);
+
+    if (!isNaN(currentQuantity)) {
+        var newQuantity = currentQuantity + value;
+
+        if (newQuantity >= 1 && newQuantity <= 99) {
+            quantityElement.innerText = newQuantity;
+
+            var optionPrice = parseInt(document.getElementById('outer').options[document.getElementById('outer').selectedIndex].dataset.price);
+            var totalPrice = 8000 + optionPrice * newQuantity;
+            document.getElementById('amount').innerText = totalPrice + '원';
+        }
+    }
+}
