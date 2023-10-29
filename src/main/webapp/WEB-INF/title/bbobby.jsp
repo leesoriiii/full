@@ -17,6 +17,7 @@
 		</div>
 		<div class="total-container">
 		<div class="slide-container">
+		<a href="/details/kkulWallet_details" target="content" style="text-decoration: none;"> 
 			<div class="slide_img_name1">
 				<div class="slide1">
 					<img src="/img(list)/kkul_Wallet1.png" alt="Kkul Image 1">

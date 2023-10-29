@@ -8,10 +8,10 @@
 <link rel="stylesheet" href="../css/accessory.css">
 </head>
 <body>
-	<h1>악세사리</h1>
+	<h1 id="heading">악세사리</h1>
 	<div id="header">
 		<p id="list" style="margin-bottom: 0px; color: #FFFFFF;">
-			악세사리 > <span style="color: #f38400; text-decoration: underline;">전체</span> > <a href="/accessory/hairpin" target="content"> 헤어핀</a> : <a href="/accessory/smart_tok" target="content"> 그립톡</a>
+			악세사리 > <span style="color: #f38400; text-decoration: underline;">전체</span> 
 		</p>
 		<hr>
 		</div>
@@ -19,99 +19,96 @@
 		<div class="slide-container">
 			<div class="slide_img_name1">
 				<div class="slide1">
-					<img src="/img(list)/kkul_Wallet1.png" alt="Kkul Image 1">
+					<img src="/img(list)/tropical_hairpin1.png" alt="Image 1">
 				</div>
 				<div class="slide1">
-					<img src="/img(list)/kkul_Wallet2.png" alt="Kkul Image 2">
+					<img src="/img(list)/tropical_hairpin2.png" alt="Image 2">
 				</div>
 				<div class="slide1">
-					<img src="/img(list)/kkul_Wallet3.png" alt="Kkul Image 3">
+					<img src="/img(list)/tropical_hairpin3.png" alt="Image 3">
 				</div>
 				<p class="product-name">
-					멍퉁망퉁 와따뀰 카드지갑<br>폭닥폭닥 개성만점 니트지갑
+					트로피컬 파라다이스 헤어핀<br>[KC인증]집게핀 어린이핀 유아핀 리본핀
 				</p>
-				<p class="price">￦23,000</p>
+				<p class="price">￦4,500</p>
 			</div>
 			<div class="slide_img_name2">
 				<div class="slide2">
-					<img src="/img(list)/julmi1.png" alt="julmi Image 1">
+					<img src="/img(list)/checkered_hairpin2.png" alt="Image 2">
 				</div>
 				<div class="slide2">
-					<img src="/img(list)/julmi2.png" alt="julmi Image 2">
+					<img src="/img(list)/checkered_hairpin3.png" alt="Image 3">
 				</div>
 				<div class="slide2">
-					<img src="/img(list)/julmi3.png" alt="julmi Image 3">
-				</div>
-				<div class="slide2">
-					<img src="/img(list)/julmi4.png" alt="julmi Image 4">
-				</div>
-				<div class="slide2">
-					<img src="/img(list)/julmi5.png" alt="julmi Image 5">
+					<img src="/img(list)/checkered_hairpin4.png" alt="jImage 4">
 				</div>
 				<p class="product-name">
-					나만의 작은 애착인형 절미<br>키링 스마트톡 핸드폰고리
+					체크망디:set 헤어핀<br>[KC인증]집게핀 어린이핀 유아핀 리본핀
 				</p>
-				<p class="price">￦8,000</p>
+				<p class="price">￦7,000</p>
 			</div>
 			<div class="slide_img_name3">
 				<div class="slide3">
-					<img src="/img(list)/kkul_doll1.png" alt="kkul_doll Image 1">
+					<img src="/img(list)/strawberry_hairpin1.png" alt="Image 1">
 				</div>
 				<div class="slide3">
-					<img src="/img(list)/kkul_doll2.png" alt="kkul_doll Image 2">
+					<img src="/img(list)/strawberry_hairpin2.png" alt="Image 2">
 				</div>
 				<p class="product-name">
-					멍퉁망퉁 와따뀰 키덜트 인형<br>볼빵빵 키링 핸드메이드 애착인형
+					딸기송송 헤어핀<br>[KC인증]집게핀 어린이핀 유아핀 리본핀
 				</p>
-				<p class="price">￦42,000</p>
+				<p class="price">￦2,200</p>
 			</div>
 		</div>
 	
 	<div class="slide-container2">
 		<div class="line2slide_img_name1">
 			<div class="line2Slide1">
-				<img src="/img(list)/bbobby_doll1.png" alt="bbobby_doll Image 1">
+				<img src="/img(list)/tulip_wallet1.png" alt="Image 1">
 			</div>
 			<div class="line2Slide1">
-				<img src="/img(list)/bbobby_doll2.png" alt="bbobby_doll Image 2">
+				<img src="/img(list)/tulip_wallet2.png" alt="Image 2">
 			</div>
 			<div class="line2Slide1">
-				<img src="/img(list)/bbobby_doll3.png" alt="bbobby_doll Image 3">
+				<img src="/img(list)/tulip_wallet3.png" alt="Image 3">
+			</div>
+			<div class="line2Slide1">
+				<img src="/img(list)/tulip_wallet4.png" alt="Image 3">
 			</div>
 			<p class="product-name">
-				단 하나뿐인 나만의 뽀삐<br>키링 핸드메이드 애착인형
+				통통 튤립 뜨개 카드지갑<br>폭닥폭닥 소녀감성 무드 니트지갑
 			</p>
-			<p class="price">￦49,000</p>
+			<p class="price">￦13,000</p>
 		</div>
 		<div class="line2slide_img_name2">
 			<div class="line2Slide2">
-				<img src="/img(list)/bbobby_Pods1.png" alt="bbobby_Pods Image 1">
+				<img src="/img(list)/bell_ribbon1.png" alt="Image 1">
 			</div>
 			<div class="line2Slide2">
-				<img src="/img(list)/bbobby_Pods2.png" alt="bbobby_Pods Image 2">
+				<img src="/img(list)/bell_ribbon2.png" alt="Image 2">
 			</div>
 			<div class="line2Slide2">
-				<img src="/img(list)/bbobby_Pods3.png" alt="bbobby_Pods Image 3">
-			</div>
-			<div class="line2Slide2">
-				<img src="/img(list)/bbobby_Pods4.png" alt="bbobby_Pods Image 3">
+				<img src="/img(list)/bell_ribbon3.png" alt="Image 3">
 			</div>
 			<p class="product-name">
-				사막여우 뽀삐 케이스<br>기본형 인형 에어팟 프로 버즈
+				벨 리본 그립 스마트톡<br>악세사리
 			</p>
-			<p class="price">￦38,000</p>
+			<p class="price">￦12,000</p>
 		</div>
 		<div class="line2slide_img_name3">
 			<div class="line2Slide3">
-				<img src="/img(list)/kkul_Tok1.png" alt="kkul_Tok Image 1">
+				<img src="/img(list)/logbag1.png" alt="Image 1">
 			</div>
 			<div class="line2Slide3">
-				<img src="/img(list)/kkul_Tok2.png" alt="kkul_Tok Image 2">
+				<img src="/img(list)/logbag2.png" alt="Image 2">
+			</div>
+			<div class="line2Slide3">
+				<img src="/img(list)/logbag3.png" alt="Image 2">
 			</div>
 			<p class="product-name">
-				멍퉁망퉁 뽀글뽀글 와따뀰<br>키링 스마트톡 핸드폰고리
+				폭식 폭신 나만의 레고백<br>폭닥폭닥 뜨개 니트가방
 			</p>
-			<p class="price">￦6,000</p>
+			<p class="price">￦25,000</p>
 		</div>
 	</div>
 	</div>

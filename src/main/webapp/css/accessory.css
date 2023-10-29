@@ -8,7 +8,12 @@
 @font-face{
 font-family:'DNFBitBitv2';
 font-style:normal;font-weight:400;src:url('//cdn.df.nexon.com/img/common/font/DNFBitBitv2.otf')format('opentype')}
-
+@font-face {
+font-family: 'UhBeeRami';
+src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_five@.2.0/UhBeeRami.woff') format('woff');
+font-weight: normal;
+font-style: normal;
+}
 
 body {
 	
@@ -75,7 +80,12 @@ hr {
 	padding-left: 17%;
 	margin-bottom: 20px;
 }
-
+#heading{
+	font-family: 'UhBeeRami';
+	color: white;
+    font-size: 80px;
+    text-shadow: 2px 2px #faa821;
+}
 .slide-container, .slide-container2 {/*슬라이드 움직임 설정?*/
 	display: flex;
 	margin-bottom: 5vw;

@@ -8,7 +8,7 @@
 <link rel="stylesheet" href="../css/animal_accessory.css">
 </head>
 <body>
-	<h1>악세사리</h1>
+	<h1 id="heading">악세사리</h1>
 	<div id="header">
 		<p id="list" style="margin-bottom: 0px; color: #FFFFFF;">
 			반려용품 > <span style="color: #f38400; text-decoration: underline;">악세사리</span>

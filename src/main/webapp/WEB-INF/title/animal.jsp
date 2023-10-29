@@ -8,10 +8,10 @@
 <link rel="stylesheet" href="../css/animal.css">
 </head>
 <body>
-	<h1>반려용품</h1>
+	<h1 id="heading">시즌 베스트</h1>
 	<div id="header">
 		<p id="list" style="margin-bottom: 0px; color: #FFFFFF;">
-			반려용품 > <span style="color: #f38400; text-decoration: underline;">전체</span> > <a href="/animal/scarf" target="content"> 케이프</a> : <a href="/animal/accessory" target="content"> 악세사리</a>
+			반려용품 > <span style="color: #f38400; text-decoration: underline;">시즌베스트</span> 
 		</p>
 		<hr>
 		</div>
@@ -19,102 +19,297 @@
 		<div class="slide-container">
 			<div class="slide_img_name1">
 				<div class="slide1">
-					<img src="/img(list)/kkul_Wallet1.png" alt="Kkul Image 1">
+					<img src="/img(list)/Christmas1.png" alt="Image 1">
 				</div>
 				<div class="slide1">
-					<img src="/img(list)/kkul_Wallet2.png" alt="Kkul Image 2">
+					<img src="/img(list)/Christmas2.png" alt="Image 2">
 				</div>
 				<div class="slide1">
-					<img src="/img(list)/kkul_Wallet3.png" alt="Kkul Image 3">
+					<img src="/img(list)/Christmas3.png" alt="Image 3">
+				</div>
+				<div class="slide1">
+					<img src="/img(list)/Christmas4.png" alt="Image 4">
+				</div>
+				<div class="slide1">
+					<img src="/img(list)/Christmas5.png" alt="Image 5">
 				</div>
 				<p class="product-name">
-					멍퉁망퉁 와따뀰 카드지갑<br>폭닥폭닥 개성만점 니트지갑
+					화이트 크리스마스 케이프<br>강아지 고양이 옷 스카프
 				</p>
-				<p class="price">￦23,000</p>
+				<p class="price">￦30,000</p>
 			</div>
 			<div class="slide_img_name2">
 				<div class="slide2">
-					<img src="/img(list)/julmi1.png" alt="julmi Image 1">
+					<img src="/img(list)/Camellia1.png" alt="Image 1">
 				</div>
 				<div class="slide2">
-					<img src="/img(list)/julmi2.png" alt="julmi Image 2">
+					<img src="/img(list)/Camellia2.png" alt="Image 2">
 				</div>
 				<div class="slide2">
-					<img src="/img(list)/julmi3.png" alt="julmi Image 3">
+					<img src="/img(list)/Camellia3.png" alt="Image 3">
 				</div>
 				<div class="slide2">
-					<img src="/img(list)/julmi4.png" alt="julmi Image 4">
+					<img src="/img(list)/Camellia4.png" alt="Image 4">
 				</div>
 				<div class="slide2">
-					<img src="/img(list)/julmi5.png" alt="julmi Image 5">
+					<img src="/img(list)/Camellia5.png" alt="Image 5">
 				</div>
 				<p class="product-name">
-					나만의 작은 애착인형 절미<br>키링 스마트톡 핸드폰고리
+					카멜리아 명품 케이프<br>강아지 고양이 옷 스카프
 				</p>
-				<p class="price">￦8,000</p>
+				<p class="price">￦29,000</p>
 			</div>
 			<div class="slide_img_name3">
 				<div class="slide3">
-					<img src="/img(list)/kkul_doll1.png" alt="kkul_doll Image 1">
+					<img src="/img(list)/Hansel_and_Gretel1.png" alt="Image 1">
 				</div>
 				<div class="slide3">
-					<img src="/img(list)/kkul_doll2.png" alt="kkul_doll Image 2">
+					<img src="/img(list)/Hansel_and_Gretel2.png" alt="Image 2">
+				</div>
+				<div class="slide3">
+					<img src="/img(list)/Hansel_and_Gretel4.png" alt="Image 3">
+				</div>
+				<div class="slide3">
+					<img src="/img(list)/Hansel_and_Gretel3.png" alt="Image 4">
 				</div>
 				<p class="product-name">
-					멍퉁망퉁 와따뀰 키덜트 인형<br>볼빵빵 키링 핸드메이드 애착인형
+					헨젤과 그레텔 케이프<br>강아지 고양이 옷 스카프
 				</p>
-				<p class="price">￦42,000</p>
+				<p class="price">￦29,000</p>
 			</div>
 		</div>
 	
 	<div class="slide-container2">
 		<div class="line2slide_img_name1">
 			<div class="line2Slide1">
-				<img src="/img(list)/bbobby_doll1.png" alt="bbobby_doll Image 1">
+				<img src="/img(list)/Frozen1.png" alt="Image 1">
 			</div>
 			<div class="line2Slide1">
-				<img src="/img(list)/bbobby_doll2.png" alt="bbobby_doll Image 2">
+				<img src="/img(list)/Frozen2.png" alt="Image 2">
 			</div>
 			<div class="line2Slide1">
-				<img src="/img(list)/bbobby_doll3.png" alt="bbobby_doll Image 3">
+				<img src="/img(list)/Frozen3.png" alt="Image 3">
 			</div>
 			<p class="product-name">
-				단 하나뿐인 나만의 뽀삐<br>키링 핸드메이드 애착인형
+				겨울왕국 케이프<br>강아지 고양이 옷 스카프
 			</p>
-			<p class="price">￦49,000</p>
+			<p class="price">￦29,000</p>
 		</div>
 		<div class="line2slide_img_name2">
 			<div class="line2Slide2">
-				<img src="/img(list)/bbobby_Pods1.png" alt="bbobby_Pods Image 1">
+				<img src="/img(list)/Paris1.png" alt="Image 1">
 			</div>
 			<div class="line2Slide2">
-				<img src="/img(list)/bbobby_Pods2.png" alt="bbobby_Pods Image 2">
+				<img src="/img(list)/Paris2.png" alt="Image 2">
 			</div>
 			<div class="line2Slide2">
-				<img src="/img(list)/bbobby_Pods3.png" alt="bbobby_Pods Image 3">
-			</div>
-			<div class="line2Slide2">
-				<img src="/img(list)/bbobby_Pods4.png" alt="bbobby_Pods Image 3">
+				<img src="/img(list)/Paris3.png" alt="Image 3">
 			</div>
 			<p class="product-name">
-				사막여우 뽀삐 케이스<br>기본형 인형 에어팟 프로 버즈
+				파리의 밤 케이프<br>강아지 고양이 옷 스카프
 			</p>
-			<p class="price">￦38,000</p>
+			<p class="price">￦29,000</p>
 		</div>
 		<div class="line2slide_img_name3">
 			<div class="line2Slide3">
-				<img src="/img(list)/kkul_Tok1.png" alt="kkul_Tok Image 1">
+				<img src="/img(list)/Bubbling1.png" alt="Image 1">
 			</div>
 			<div class="line2Slide3">
-				<img src="/img(list)/kkul_Tok2.png" alt="kkul_Tok Image 2">
+				<img src="/img(list)/Bubbling2.png" alt="Image 2">
 			</div>
 			<p class="product-name">
-				멍퉁망퉁 뽀글뽀글 와따뀰<br>키링 스마트톡 핸드폰고리
+				[데일리 추천] 버블링 케이프<br>강아지 고양이 옷 스카프
 			</p>
-			<p class="price">￦6,000</p>
+			<p class="price">￦24,000</p>
 		</div>
 	</div>
 	</div>
+	
+	<br><br><br><br>
+	
+	<h1 id="heading">가볍고 깜찍하게</h1>
+	<div id="header">
+	<p id="list" style="margin-bottom: 0px; color: #FFFFFF;">
+			반려용품 > <span style="color: #f38400; text-decoration: underline;">가볍고깜찍하게</span> 
+		</p>
+		<hr>
+	</div>
+	
+	<div class="total-container">
+		<div class="slide-container3">
+			<div class="line3slide_img_name1">
+				<div class="line3Slide1">
+					<img src="/img(list)/Heart1.png" alt="Image 1">
+				</div>
+				<div class="line3Slide1">
+					<img src="/img(list)/Heart2.png" alt="Image 2">
+				</div>
+				<div class="line3Slide1">
+					<img src="/img(list)/Heart3.png" alt="Image 3">
+				</div>
+				<p class="product-name">
+				알록달록 하트 빕 스카프<br>강아지 고양이 옷 케이프
+			</p>
+			<p class="price">￦14,000</p>
+			</div>
+			<div class="line3slide_img_name2">
+				<div class="line3Slide2">
+					<img src="/img(list)/Beep1.png" alt="Image 1">
+				</div>
+				<div class="line3Slide2">
+					<img src="/img(list)/Beep2.png" alt="Image 2">
+				</div>
+				<p class="product-name">
+				뽀글뽀글 부비부빕 스카프<br>강아지 고양이 옷 케이프
+			</p>
+			<p class="price">￦15,000</p>
+			</div>
+			<div class="line3slide_img_name3">
+				<div class="line3Slide3">
+					<img src="/img(list)/2cm1.png" alt="Image 1">
+				</div>
+				<div class="line3Slide3">
+					<img src="/img(list)/2cm2.png" alt="Image 2">
+				</div>
+				<div class="line3Slide3">
+					<img src="/img(list)/2cm3.png" alt="Image 3">
+				</div>
+				<div class="line3Slide3">
+					<img src="/img(list)/2cm5.png" alt="Image 4">
+				</div>
+				<div class="line3Slide3">
+					<img src="/img(list)/2cm4.png" alt="Image 5">
+				</div>
+			<p class="product-name">
+				미니 니트핀(2cm)<br>가벼운 포인트 미간핀
+			</p>
+			<p class="price">￦2,500</p>
+			</div>
+		</div>
+	</div>
+	
+	
+	
+	
+	
+	<br><br><br><br>
+	
+	<h1 id="heading">러블리</h1>
+	<div id="header">
+	<p id="list" style="margin-bottom: 0px; color: #FFFFFF;">
+			반려용품 > <span style="color: #f38400; text-decoration: underline;">러블리</span> 
+		</p>
+		<hr>
+	</div>
+	
+
+	<div class="total-container">
+		<div class="slide-container4">
+			<div class="line4slide_img_name1">
+				<div class="line4Slide1">
+					<img src="/img(list)/Snow_White1.png" alt="Image 1">
+				</div>
+				<div class="line4Slide1">
+					<img src="/img(list)/Snow_White2.png" alt="Image 2">
+				</div>
+				<div class="line4Slide1">
+					<img src="/img(list)/Snow_White3.png" alt="Image 3">
+				</div>
+				<div class="line4Slide1">
+					<img src="/img(list)/Snow_White4.png" alt="Image 4">
+				</div>
+				<p class="product-name">
+					거울아 거울아 누가 제일 예뻐<br>백설공주 강아지 고양이 스카프
+				</p>
+				<p class="price">￦29,000</p>
+			</div>
+			<div class="line4slide_img_name2">
+				<div class="line4Slide2">
+					<img src="/img(list)/Cinderella1.png" alt="Image 1">
+				</div>
+				<div class="line4Slide2">
+					<img src="/img(list)/Cinderella2.png" alt="Image 2">
+				</div>
+				<p class="product-name">
+					신데렐라 케이프<br>강아지 고양이 옷 스카프
+				</p>
+				<p class="price">￦29,000</p>
+			</div>
+			<div class="line4slide_img_name3">
+				<div class="line4Slide3">
+					<img src="/img(list)/Romance1.png" alt="Image 1">
+				</div>
+				<div class="line4Slide3">
+					<img src="/img(list)/Romance2.png" alt="Image 2">
+				</div>
+				<div class="line4Slide3">
+					<img src="/img(list)/Romance3.png" alt="Image 3">
+				</div>
+				<div class="line4Slide3">
+					<img src="/img(list)/Romance4.png" alt="Image 4">
+				</div>
+				<div class="line4Slide3">
+					<img src="/img(list)/Romance5.png" alt="Image 5">
+				</div>
+				<p class="product-name">
+					살랑살랑 로망스 케이프<br>강아지 고양이 옷 스카프
+				</p>
+				<p class="price">￦27,000</p>
+			</div>
+		</div>
+	
+	<div class="slide-container5">
+		<div class="line5slide_img_name1">
+			<div class="line5Slide1">
+				<img src="/img(list)/Wedding1.png" alt="Image 1">
+			</div>
+			<div class="line5Slide1">
+				<img src="/img(list)/Wedding2.png" alt="Image 2">
+			</div>
+			<div class="line5Slide1">
+				<img src="/img(list)/Wedding3.png" alt="Image 3">
+			</div>
+			<div class="line5Slide1">
+				<img src="/img(list)/Wedding3.png" alt="Image 4">
+			</div>
+			<p class="product-name">
+				두근두근, 웨딩플로럴 케이프<br>강아지 고양이 옷 스카프
+			</p>
+			<p class="price">￦28,000</p>
+		</div>
+		<div class="line5slide_img_name1">
+			<div class="line5Slide2">
+				<img src="/img(list)/Moon1.png" alt="Image 1">
+			</div>
+			<div class="line5Slide2">
+				<img src="/img(list)/Moon2.png" alt="Image 2">
+			</div>
+			<p class="product-name">
+				이웨카 블러썸 케이프<br>강아지 고양이 옷 스카프
+			</p>
+			<p class="price">￦27,000</p>
+		</div><div class="line5slide_img_name1">
+			<div class="line5Slide3">
+				<img src="/img(list)/Beach1.png" alt="Image 1">
+			</div>
+			<div class="line5Slide3">
+				<img src="/img(list)/Beach2.png" alt="Image 2">
+			</div>
+			<div class="line5Slide3">
+				<img src="/img(list)/Beach3.png" alt="Image 3">
+			</div>
+			<p class="product-name">
+				바다향기 가득 비치 케이프<br>강아지 고양이 옷 스카프
+			</p>
+			<p class="price">￦25,000</p>
+		</div>
+	</div>
+	</div>
+
+
+	
+	
+	
 	<div id="header">
 		<hr>
 		<p style="margin-left:10px; font-size: 14px; font-weight: bold; color: white;">가득샵<br>

@@ -5,10 +5,11 @@ currentIdx = 0;
 slideCount = slideImg.length; // 이미지 수에 따라 수정
 prev = document.querySelector('.prev'); //이전 버튼
 next = document.querySelector('.next'); //다음 버튼
-slideWidth = 500; //슬라이드이미지 넓이
+slideWidth = 600; //슬라이드이미지 넓이
 slideMargin = 0; //슬라이드 끼리의 마진값
 makeClone(); // 처음이미지와 마지막 이미지 복사 함수
 initfunction(); //슬라이드 넓이와 위치값 초기화 함수
+
 
 
 function makeClone() {
@@ -117,44 +118,104 @@ document.querySelectorAll('.indicator').forEach((indicator, index) => {
 });
 
 
-//주문 옵션 재차 확인 불러오는 코드
- function showSelection() {
-    var version = document.getElementById('version').value;
-    var outer = document.getElementById('outer').value;
-    var price = 8000;
 
-    if (version !== '버전선택' && outer !== '외형선택') {
-        var selectedOptions = document.getElementById('selected_options');
-        var newOption = document.createElement('div');
+var options = {}; // 옵션을 담는 객체
+var basicPrice = 8000;
 
-        var optionPrice = parseInt(document.getElementById('outer').options[document.getElementById('outer').selectedIndex].dataset.price);
 
-        newOption.innerHTML = '버전: ' + version + ' / 외형: ' + outer + '<br><span id="amount">' + (price + optionPrice) + '원 </span><input type="button" value="&lt;" onclick="changeQuantity(-1)"> <span id="quantity">1</span> <input type="button" value="&gt;" onclick="changeQuantity(1)"><hr>';
-        newOption.style.textAlign = 'right';
-        selectedOptions.appendChild(newOption);
+// 페이지 로드 시에 <hr> 숨기기
+document.getElementById('optionHr').style.display = 'none';
+//옵션이 추가될때
+function showSelection() {
+   var version = document.getElementById('version').value;
+  var outer = document.getElementById('outer').value;
 
-        // 옵션 선택란 초기화
-        document.getElementById('version').value = '버전선택';
-        document.getElementById('outer').value = '외형선택';
+  if (version !== '버전선택' && outer !== '외형선택') {
+    var selectedOptions = document.getElementById('selected_options');
 
-        // 수량 초기화
-        document.getElementById('quantity').innerText = '1';
-        document.getElementById('amount').innerText = (price + optionPrice) + '원';
+    // 옵션을 추가
+    var optionKey = version + '_' + outer; // 각 옵션을 식별하는 키
+    options[optionKey] = options[optionKey] || { price: 0, quantity: 0 };
+    options[optionKey].price = parseInt(document.getElementById('outer').options[document.getElementById('outer').selectedIndex].dataset.price);
+    options[optionKey].quantity += 1;
+
+    var newOption = document.createElement('div');
+    newOption.innerHTML = '버전: ' + version + ' / 외형: ' + outer + ' <input id="remove" type="button" value=" ✕ " onclick="removeOption(\'' + optionKey + '\')"> <br><span id="amount_' 
+    						+ optionKey + '">' + ((basicPrice + options[optionKey].price) * options[optionKey].quantity) + '원 </span> <input id="minMax" type="button" value="-" onclick="changeQuantity(\'' 
+    						+ optionKey + '\', -1)"> <span id="quantity_' + optionKey + '">' + options[optionKey].quantity + '</span> <input id="minMax" type="button" value="+" onclick="changeQuantity(\'' 
+    						+ optionKey + '\', 1)"><hr id="optionHr">';
+
+    newOption.style.textAlign = 'right';
+    selectedOptions.appendChild(newOption);
+
+    // 옵션 선택란 초기화
+    document.getElementById('version').value = '버전선택';
+    document.getElementById('outer').value = '외형선택';
+    
+    // 옵션 추가 시 총 금액 업데이트
+    updateTotalAmount();
+    
+    // <hr> 표시
+    document.getElementById('optionHr').style.display = 'block';
+    
+    // 옵션 삭제 버튼 추가
+    var deleteButton = document.createElement('button');
+    deleteButton.type = 'button';
+    deleteButton.onclick = function() {
+      removeOption(optionKey);
+    };
+    newOption.appendChild(deleteButton);
+    newOption.id = optionKey; // 옵션을 구별하기 위한 ID 설정
+
+    // - 버튼 비활성화 처리
+    var minusButton = newOption.querySelector('input[value="-"]');
+    if (options[optionKey].quantity === 1) {
+      minusButton.disabled = true;
     }
+  }
 }
-function changeQuantity(value) {
-    var quantityElement = document.getElementById('quantity');
-    var currentQuantity = parseInt(quantityElement.innerText);
+function removeOption(optionKey) {
+  if (options[optionKey]) {
+    var optionElement = document.getElementById(optionKey);
+    optionElement.parentNode.removeChild(optionElement);
+    delete options[optionKey]; // 옵션 객체에서 해당 옵션 삭제
+    updateTotalAmount(); // 총 금액 업데이트
+  }
+}
 
-    if (!isNaN(currentQuantity)) {
-        var newQuantity = currentQuantity + value;
+function changeQuantity(optionKey, value) {
+ if (options[optionKey]) {
+    options[optionKey].quantity += value;
+    if (options[optionKey].quantity >= 1 && options[optionKey].quantity <= 99) {
+      var quantityElement = document.getElementById('quantity_' + optionKey);
+      quantityElement.innerText = options[optionKey].quantity;
+      var totalPrice = (basicPrice + options[optionKey].price) * options[optionKey].quantity;
+      document.getElementById('amount_' + optionKey).innerText = totalPrice + '원 ';
+      updateTotalAmount(); // 총 금액 업데이트
 
-        if (newQuantity >= 1 && newQuantity <= 99) {
-            quantityElement.innerText = newQuantity;
+      // - 버튼 비활성화 처리
+      var minusButton = document.getElementById(optionKey).querySelector('input[value="-"]');
+      minusButton.disabled = options[optionKey].quantity === 1;
 
-            var optionPrice = parseInt(document.getElementById('outer').options[document.getElementById('outer').selectedIndex].dataset.price);
-            var totalPrice = 8000 + optionPrice * newQuantity;
-            document.getElementById('amount').innerText = totalPrice + '원';
-        }
+      // 클릭 시 색상 변경 스타일 추가
+      minusButton.classList.add('click-effect');
+
+      // 클릭 이펙트 제거 (예: 0.3초 후에 제거)
+      setTimeout(function() {
+        minusButton.classList.remove('click-effect');
+      }, 300); // 0.3초
     }
+  }
+}
+function updateTotalAmount() {
+  var totalAmount = 0;
+
+  for (var optionKey in options) {
+    if (options.hasOwnProperty(optionKey)) {
+      totalAmount += (basicPrice + options[optionKey].price) * options[optionKey].quantity;
+    }
+  }
+
+  // 총 금액 업데이트
+  document.getElementById('total_amount').innerText = totalAmount + '원';
 }

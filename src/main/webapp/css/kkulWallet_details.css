@@ -1,0 +1,259 @@
+@charset "UTF-8";
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face{
+font-family:'DNFBitBitv2';
+font-style:normal;font-weight:400;src:url('//cdn.df.nexon.com/img/common/font/DNFBitBitv2.otf')format('opentype')}
+
+@font-face {
+    font-family: 'omyu_pretty';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-01@1.0/omyu_pretty.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+	margin-top: 100px;
+	background: linear-gradient(to top, #ffffff,  #FCDEAB);
+	background-size: 100% 10%;
+	background-repeat: repeat-x;
+	display: flex;
+ 	flex-direction: column;
+    justify-content: center;
+	justify-content: center;
+    align-items: center;
+}
+
+#img {
+	width: 600px;
+	
+}
+#heading{
+	font-family:'DNFBitBitv2';
+	color: white;
+    font-size: 80px;
+    text-shadow: 2px 2px #faa821;
+}
+hr {
+  border: none; /* 기본 테두리 제거 */
+  border: 1px solid #FCDEAB;
+  box-shadow: 0px 1px 1px rgba(250, 168, 33, 0.2);
+  width: 81%; /* 가로 너비 */
+  margin: 5px 0; /* 위아래 여백 추가 (선택적) */
+  margin-bottom: 30px;
+}
+#optionHr {
+	border: none; /* 기본 테두리 제거 */
+  border: 1px solid #Ffffff;
+  width: 100%; /* 가로 너비 */
+  margin: 5px 0; /* 위아래 여백 추가 (선택적) */
+}
+
+#header {
+	padding-top: 0px;
+	width: 110%;
+	padding-left: 17%;
+	margin-bottom: 20px;
+}
+
+/* 보여줄 구간의 높이와 넓이 설정 */
+#slideShow {
+  /*전체 컨테이너*/
+  width: 600px;
+  height: 450px;
+  position: relative;
+  margin-bottom: 50px;
+  overflow: hidden; /*리스트 형식으로 이미지를 일렬로 정렬할 것이기 때문에, 500px 밖으로 튀어 나간 이미지들은 hidden으로 숨겨줘야됨*/
+}
+.slides {
+  /*이미지들이 담겨있는 슬라이드 컨테이너*/
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: 0.2s ease-out; /*ease-out: 처음에는 느렸다가 점점 빨라짐*/
+  list-style: none;
+} 
+
+.slides li {
+  float: left;
+}
+
+.slides li:not(:last-child) {/* 슬라이드들 옆으로 정렬 */
+  float: left;
+}
+
+.controller span {
+  position: absolute;
+  background-color: transparent;
+  color:#FFFFFF;
+  text-align: center;
+  border-radius: 50%;
+  padding: 10px 20px;
+  top: 50%;
+  font-size: 1.3em;
+  cursor: pointer;
+} /* 이전, 다음 화살표에 마우스 커서가 올라가 있을때 */
+.controller span:hover {
+  background-color: rgba(128, 128, 128, 0.11);
+}
+.prev {
+  left: 10px;
+} /* 이전 화살표에 마우스 커서가 올라가 있을때 이전 화살표가 살짝 왼쪽으로 이동하는 효과*/
+.prev:hover {
+  transform: translateX(-10px);
+}
+.next {
+  right: 10px;
+} /* 다음 화살표에 마우스 커서가 올라가 있을때 이전 화살표가 살짝 오른쪽으로 이동하는 효과*/
+.next:hover {
+  transform: translateX(10px);
+}
+
+.slide-content {
+  display: flex;
+  flex-direction: column; /* 요소들을 세로로 배치 */
+  gap: 10px; /* 이미지와 제목/설명 사이의 간격 조정 */
+  
+}
+
+
+.indicators {
+  display: flex;
+  justify-content: center; /* 가로로 가운데 정렬 */
+  margin-top: -40px; /* 슬라이드 아래에 여백 추가 */
+  margin-bottom: 50px; /* 슬라이드 아래에 여백 추가 */
+}
+
+.indicator {
+  width: 10px;
+  height: 10px;
+  background-color: #FCDEAB;
+  border: none;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.indicator:hover {
+  background-color: #faa821; /* 마우스를 올렸을 때 배경색 변경 (선택한 슬라이드에 따라 변경 가능) */
+}
+
+.indicator.active {
+  background-color: #faa821; /* 활성화 상태일 때 배경색 변경 */
+}
+.details {
+  right: 0;
+  width: 600px; /* 또는 적절한 값을 지정하세요 */
+    margin: 0;
+}
+.total {
+	display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px; /* 컨테이너와 하단 요소 간의 간격을 조절합니다 */
+  height: auto; /* 높이를 자동으로 조절합니다 */
+}
+
+h2 {
+	margin-top: 20px;
+	font-size: 50px;
+	font-family: 'omyu_pretty';
+	color: #FFFFFF;
+	text-shadow: 1px 1px #faa821;
+}
+.option-row {
+            display: flex;
+            justify-content: space-between;
+        }
+.tag {
+	font-size: 25px;
+	font-family: 'omyu_pretty';
+	color: #FFFFFF;
+	text-shadow: 1px 1px #faa821;
+}
+
+#color, #eye {
+	border:1px solid #faa821;
+	width:600px;
+	height: 30px;
+	margin-bottom:10px;
+}
+/* 버전 선택 박스 포커스 스타일 */
+#color:focus {
+  border: 2px solid #faa821; /* 포커스 상태에서의 테두리 색상을 변경합니다. 예시는 파란색 (#007bff)으로 지정했습니다. */
+  outline: none; /* 포커스 테두리를 제거합니다. (선택적) */
+}
+
+/* 외형 선택 박스 포커스 스타일 */
+#eye:focus {
+  border: 2px solid #faa821; /* 포커스 상태에서의 테두리 색상을 변경합니다. 예시는 파란색 (#007bff)으로 지정했습니다. */
+  outline: none; /* 포커스 테두리를 제거합니다. (선택적) */
+}
+
+#submit1 {
+	margin-right: 10px;
+	
+}
+#submit1,#submit2 {
+	width: 291px;
+	height: 40px;
+	background-color:#ffffff; 
+	color: #faa821;
+	font-weight: bold;
+	border-radius: 10px;
+	border: 1px solid #faa821;
+	font-size: 15px;
+	cursor: pointer;
+}
+#submit1:hover {
+	background-color: #faa821;
+	color:#ffffff; 
+	font-weight: bold;
+	border-radius: 10px;
+	border: 1px solid #ffffff;
+}
+#submit2:hover{
+	background-color: #faa821;
+	color:#ffffff; 
+	font-weight: bold;
+	border-radius: 10px;
+	border: 1px solid #ffffff;
+}
+.total-amount {
+  float: right;
+  font-weight: bold;
+}
+#minMax {
+	width: 15px;
+	border: none;
+	background-color: #FCDEAB; 
+	border-radius: 30%;
+}
+#remove {
+	align-items: center;
+	font-size: 10px;
+	font-weight: bold;
+	width: 20px;
+	height: 20px;
+	border: 1px solid black;
+	background-color: rgba(0, 0, 0, 0);
+	border-radius: 30%;
+}
+#remove:hover {
+	background-color: #FCDEAB; 
+	}
+	
+#version #outer {
+	font-size: 12px;
+	
+}
+#selected_options {
+	font-size: 13px;
+	
+}

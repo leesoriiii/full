@@ -23,9 +23,11 @@
     </li>
     <li>
 	<div class="slide-content">
+		<a href="/details/kkulWallet_details" target="content" style="text-decoration: none;"> 
     	<img src="../img/kkul_Wallet.png" alt="Image 2" id="img">
 			<h2>멍충망충 와따뀰 카드지갑</h2>
 			<p class="tag">#개성만점 #유니크 #니트지갑</p>
+			</a>
     </div>    
     </li>
     <li>

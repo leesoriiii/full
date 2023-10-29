@@ -228,22 +228,11 @@ function resize() {
 				target="content" style="text-decoration: none;">
 					<div class="menu-title">악세사리</div>
 			</a>
-				<ol class="sub-menu">
-					<li class="sub-menu-item"><a target="content"
-						href="/accessory/hairpin">헤어핀</a></li>
-					<li class="sub-menu-item"><a target="content"
-						href="/accessory/smart_tok">스마트톡</a></li>
-				</ol></li>
 			<li class="menu-item"><a href="/title/animal" target="content"
 				style="text-decoration: none;">
 					<div class="menu-title">반려용품</div>
 			</a>
-				<ol class="sub-menu">
-					<li class="sub-menu-item"><a target="content"
-						href="/animal/scarf">케이프</a></li>
-					<li class="sub-menu-item"><a target="content"
-						href="/animal/accessory">악세사리</a></li>
-				</ol></li>
+				</li>
 			<li class="menu-item"><a href="cs.jsp" target="content"
 				style="text-decoration: none;">
 					<div class="menu-title">문의</div>

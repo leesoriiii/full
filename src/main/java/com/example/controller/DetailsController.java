@@ -23,6 +23,11 @@ public class DetailsController {
 	@GetMapping("/julmi_details")
 	void julmi_details(Model model) {
 		log.info("julmi_details()...");
+	}
+		
+	@GetMapping("/kkulWallet_details")
+	void kkulWallet_details(Model model) {
+		log.info("kkulWallet_details()...");
 		
 	}
 	
