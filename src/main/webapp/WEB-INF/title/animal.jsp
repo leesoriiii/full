@@ -17,6 +17,7 @@
 		</div>
 		<div class="total-container">
 		<div class="slide-container">
+		<a href="/details/christmas_details" target="content" style="text-decoration: none;">
 			<div class="slide_img_name1">
 				<div class="slide1">
 					<img src="/img(list)/Christmas1.png" alt="Image 1">
@@ -38,6 +39,7 @@
 				</p>
 				<p class="price">￦30,000</p>
 			</div>
+			</a>
 			<div class="slide_img_name2">
 				<div class="slide2">
 					<img src="/img(list)/Camellia1.png" alt="Image 1">

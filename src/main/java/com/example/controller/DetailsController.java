@@ -31,6 +31,12 @@ public class DetailsController {
 		
 	}
 	
+	@GetMapping("/christmas_details")
+	void Christmas_details(Model model) {
+		log.info("christmas_details()...");
+		
+	}
+	
 	
 	
 	

@@ -16,52 +16,8 @@
 		<hr>
 		</div>
 		<div class="total-container">
-		<div class="slide-container">
-			<div class="slide_img_name1">
-				<div class="slide1">
-					<img src="/img(list)/tropical_hairpin1.png" alt="Image 1">
-				</div>
-				<div class="slide1">
-					<img src="/img(list)/tropical_hairpin2.png" alt="Image 2">
-				</div>
-				<div class="slide1">
-					<img src="/img(list)/tropical_hairpin3.png" alt="Image 3">
-				</div>
-				<p class="product-name">
-					트로피컬 파라다이스 헤어핀<br>[KC인증]집게핀 어린이핀 유아핀 리본핀
-				</p>
-				<p class="price">￦4,500</p>
-			</div>
-			<div class="slide_img_name2">
-				<div class="slide2">
-					<img src="/img(list)/checkered_hairpin2.png" alt="Image 2">
-				</div>
-				<div class="slide2">
-					<img src="/img(list)/checkered_hairpin3.png" alt="Image 3">
-				</div>
-				<div class="slide2">
-					<img src="/img(list)/checkered_hairpin4.png" alt="jImage 4">
-				</div>
-				<p class="product-name">
-					체크망디:set 헤어핀<br>[KC인증]집게핀 어린이핀 유아핀 리본핀
-				</p>
-				<p class="price">￦7,000</p>
-			</div>
-			<div class="slide_img_name3">
-				<div class="slide3">
-					<img src="/img(list)/strawberry_hairpin1.png" alt="Image 1">
-				</div>
-				<div class="slide3">
-					<img src="/img(list)/strawberry_hairpin2.png" alt="Image 2">
-				</div>
-				<p class="product-name">
-					딸기송송 헤어핀<br>[KC인증]집게핀 어린이핀 유아핀 리본핀
-				</p>
-				<p class="price">￦2,200</p>
-			</div>
-		</div>
-	
-	<div class="slide-container2">
+		
+		<div class="slide-container2">
 		<div class="line2slide_img_name1">
 			<div class="line2Slide1">
 				<img src="/img(list)/tulip_wallet1.png" alt="Image 1">
@@ -111,6 +67,52 @@
 			<p class="price">￦25,000</p>
 		</div>
 	</div>
+	<div class="slide-container">
+			<div class="slide_img_name1">
+				<div class="slide1">
+					<img src="/img(list)/tropical_hairpin1.png" alt="Image 1">
+				</div>
+				<div class="slide1">
+					<img src="/img(list)/tropical_hairpin2.png" alt="Image 2">
+				</div>
+				<div class="slide1">
+					<img src="/img(list)/tropical_hairpin3.png" alt="Image 3">
+				</div>
+				<p class="product-name">
+					트로피컬 파라다이스 헤어핀<br>[KC인증]집게핀 어린이핀 유아핀 리본핀
+				</p>
+				<p class="price">￦4,500</p>
+			</div>
+			<div class="slide_img_name2">
+				<div class="slide2">
+					<img src="/img(list)/checkered_hairpin2.png" alt="Image 2">
+				</div>
+				<div class="slide2">
+					<img src="/img(list)/checkered_hairpin3.png" alt="Image 3">
+				</div>
+				<div class="slide2">
+					<img src="/img(list)/checkered_hairpin4.png" alt="jImage 4">
+				</div>
+				<p class="product-name">
+					체크망디:set 헤어핀<br>[KC인증]집게핀 어린이핀 유아핀 리본핀
+				</p>
+				<p class="price">￦7,000</p>
+			</div>
+			<div class="slide_img_name3">
+				<div class="slide3">
+					<img src="/img(list)/strawberry_hairpin1.png" alt="Image 1">
+				</div>
+				<div class="slide3">
+					<img src="/img(list)/strawberry_hairpin2.png" alt="Image 2">
+				</div>
+				<p class="product-name">
+					딸기송송 헤어핀<br>[KC인증]집게핀 어린이핀 유아핀 리본핀
+				</p>
+				<p class="price">￦2,200</p>
+			</div>
+		</div>
+	
+	
 	</div>
 	<div id="header">
 		<hr>

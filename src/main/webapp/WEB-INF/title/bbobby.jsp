@@ -33,6 +33,7 @@
 				</p>
 				<p class="price">￦23,000</p>
 			</div>
+			</a>
 			<a href="/details/julmi_details" target="content" style="text-decoration: none;"> 
 			<div class="slide_img_name2">
 				<div class="slide2">

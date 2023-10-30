@@ -1,3 +1,7 @@
+
+
+
+
 let slides = document.querySelector('.slides');
 let slideImg = document.querySelectorAll('.slides li');
 let slideTexts = document.querySelectorAll('.slides li .slide-text'); // 새로운 텍스트 컨테이너 선택
@@ -197,13 +201,6 @@ function changeQuantity(optionKey, value) {
       var minusButton = document.getElementById(optionKey).querySelector('input[value="-"]');
       minusButton.disabled = options[optionKey].quantity === 1;
 
-      // 클릭 시 색상 변경 스타일 추가
-      minusButton.classList.add('click-effect');
-
-      // 클릭 이펙트 제거 (예: 0.3초 후에 제거)
-      setTimeout(function() {
-        minusButton.classList.remove('click-effect');
-      }, 300); // 0.3초
     }
   }
 }
