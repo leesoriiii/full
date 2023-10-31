@@ -16,8 +16,8 @@
 		<hr>
 		</div>
 		<div class="total-container">
-		
 		<div class="slide-container2">
+		<a href="/details/TulipWallet_details" target="content" style="text-decoration: none;">
 		<div class="line2slide_img_name1">
 			<div class="line2Slide1">
 				<img src="/img(list)/tulip_wallet1.png" alt="Image 1">
@@ -36,6 +36,7 @@
 			</p>
 			<p class="price">￦13,000</p>
 		</div>
+		</a>
 		<div class="line2slide_img_name2">
 			<div class="line2Slide2">
 				<img src="/img(list)/bell_ribbon1.png" alt="Image 1">

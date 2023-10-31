@@ -272,7 +272,10 @@
 				<img src="/img(list)/Wedding3.png" alt="Image 3">
 			</div>
 			<div class="line5Slide1">
-				<img src="/img(list)/Wedding3.png" alt="Image 4">
+				<img src="/img(list)/Wedding4.png" alt="Image 4">
+			</div>
+			<div class="line5Slide1">
+				<img src="/img(list)/Wedding5.png" alt="Image 5">
 			</div>
 			<p class="product-name">
 				두근두근, 웨딩플로럴 케이프<br>강아지 고양이 옷 스카프

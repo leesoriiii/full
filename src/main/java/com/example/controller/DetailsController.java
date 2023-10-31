@@ -30,6 +30,11 @@ public class DetailsController {
 		log.info("kkulWallet_details()...");
 		
 	}
+	@GetMapping("/TulipWallet_details")
+	void TulipWallet_details(Model model) {
+		log.info("TulipWallet_details()...");
+		
+	}
 	
 	@GetMapping("/christmas_details")
 	void Christmas_details(Model model) {

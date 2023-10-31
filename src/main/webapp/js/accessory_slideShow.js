@@ -1,4 +1,4 @@
-l
+//l줄
 
 let slides;
 let slideIndex = 0; // 현재 슬라이드 인덱스
@@ -125,5 +125,3 @@ function twoShowSlides3() {
   slides2[twoSlideIndex3].style.display = 'block';
   setTimeout(twoShowSlides3, 2000); // 2초마다 이미지 전환
 }
-
-

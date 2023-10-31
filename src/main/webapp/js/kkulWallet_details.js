@@ -62,6 +62,7 @@ next.addEventListener('click', function() {
 	indicators[currentIdx].classList.add('active');
 });
 
+
 prev.addEventListener('click', function() {
 	//이전 버튼 눌렀을때
 	console.log(currentIdx);
@@ -111,11 +112,13 @@ document.querySelectorAll('.indicator').forEach((indicator, index) => {
 	});
 });
 
-
 var options = {}; // 옵션을 담는 객체
 var basicPrice = 23000;
-var selectedOption1 = null; // 중복방지용 옵션 저장
-var selectedOption2 = null;
+
+var selectedOptions1 = [];
+var selectedOptions2 = [];
+var isDup = false;
+
 
 // 페이지 로드 시에 <hr> 숨기기
 document.getElementById('optionHr').style.display = 'none';
@@ -125,22 +128,22 @@ function showSelection() {
 	var option2 = document.getElementById('option2').value;
 
 	if (option1 !== '색상 선택' && option2 !== '눈 방향 선택') {
-		if (option1 !== selectedOption1 || option2 !== selectedOption2) {
-			// 중복 선택이 아닌 경우에만 처리
-			selectedOption1 = option1;
-			selectedOption2 = option2;
-
+		if (selectedOptions1.length === 0) {
 			var selectedOptions = document.getElementById('selected_options');
 
 			// 옵션을 추가
 			var optionKey = option1 + '_' + option2; // 각 옵션을 식별하는 키
 			options[optionKey] = options[optionKey] || { price: 0, quantity: 0 };
-			options[optionKey].price = parseInt(document.getElementById('option2').options[document.getElementById('option2').selectedIndex].dataset.price) || 0;
+			options[optionKey].price = parseInt(document.getElementById('option2').options[document.getElementById('option2').selectedIndex].dataset.price);
+			options[optionKey].price2 = parseInt(document.getElementById('option2').options[document.getElementById('option2').selectedIndex].dataset.price);
 			options[optionKey].quantity += 1;
-
+			
+			console.log(options[optionKey].price);
+			
+			
 			var newOption = document.createElement('div');
 			newOption.innerHTML = '색상: ' + option1 + ' / 눈 방향: ' + option2 + ' <input id="remove" type="button" value=" ✕ " onclick="removeOption(\'' + optionKey + '\')"> <br><span id="amount_'
-				+ optionKey + '">' + ((basicPrice + options[optionKey].price) * options[optionKey].quantity) + '원 </span> <input id="minMax" type="button" value="-" onclick="changeQuantity(\''
+				+ optionKey + '">' + (basicPrice * options[optionKey].quantity) + '원 </span> <input id="minMax" type="button" value="-" onclick="changeQuantity(\''
 				+ optionKey + '\', -1)"> <span id="quantity_' + optionKey + '">' + options[optionKey].quantity + '</span> <input id="minMax" type="button" value="+" onclick="changeQuantity(\''
 				+ optionKey + '\', 1)"><hr id="optionHr">';
 
@@ -171,15 +174,76 @@ function showSelection() {
 			if (options[optionKey].quantity === 1) {
 				minusButton.disabled = true;
 			}
+
+			selectedOptions1.push(option1);
+			selectedOptions2.push(option2);
 		} else {
-			alert('이미 선택된 옵션입니다.');
+			for (let i = 0; i < selectedOptions1.length; i++) {
+				if (selectedOptions1[i] == option1 && selectedOptions2[i] == option2) {
+					isDup = true
+					break;
+				} else {
+					isDup = false
+				}
+			}
+			if (isDup) {
+				alert('이미 선택된 옵션입니다.');
+				// 옵션 선택란 초기화
+				document.getElementById('option1').value = '색상 선택';
+				document.getElementById('option2').value = '눈 방향 선택';
+			} else {
+			var selectedOptions = document.getElementById('selected_options');
+
+			// 옵션을 추가
+			var optionKey = option1 + '_' + option2; // 각 옵션을 식별하는 키
+			options[optionKey] = options[optionKey] || { price: 0, quantity: 0 };
+			options[optionKey].price = parseInt(document.getElementById('option2').options[document.getElementById('option2').selectedIndex].dataset.price);
+			options[optionKey].price2 = parseInt(document.getElementById('option2').options[document.getElementById('option2').selectedIndex].dataset.price);
+			options[optionKey].quantity += 1;
+
+			var newOption = document.createElement('div');
+			newOption.innerHTML = '사이즈: ' + option1 + ' / 눈 방향: ' + option2 + ' <input id="remove" type="button" value=" ✕ " onclick="removeOption(\'' + optionKey + '\')"> <br><span id="amount_'
+				+ optionKey + '">' + (basicPrice * options[optionKey].quantity) + '원 </span> <input id="minMax" type="button" value="-" onclick="changeQuantity(\''
+				+ optionKey + '\', -1)"> <span id="quantity_' + optionKey + '">' + options[optionKey].quantity + '</span> <input id="minMax" type="button" value="+" onclick="changeQuantity(\''
+				+ optionKey + '\', 1)"><hr id="optionHr">';
+
+			newOption.style.textAlign = 'right';
+			selectedOptions.appendChild(newOption);
+
 			// 옵션 선택란 초기화
 			document.getElementById('option1').value = '색상 선택';
 			document.getElementById('option2').value = '눈 방향 선택';
-		}
-	}
-}
 
+			// 옵션 추가 시 총 금액 업데이트
+			updateTotalAmount();
+
+			// <hr> 표시
+			document.getElementById('optionHr').style.display = 'block';
+
+			// 옵션 삭제 버튼 추가
+			var deleteButton = document.createElement('button');
+			deleteButton.type = 'button';
+			deleteButton.onclick = function() {
+				removeOption(optionKey);
+			};
+			newOption.appendChild(deleteButton);
+			newOption.id = optionKey; // 옵션을 구별하기 위한 ID 설정
+
+			// - 버튼 비활성화 처리
+			var minusButton = newOption.querySelector('input[value="-"]');
+			if (options[optionKey].quantity === 1) {
+				minusButton.disabled = true;
+			}
+
+			selectedOptions1.push(option1);
+			selectedOptions2.push(option2);
+			}
+		}
+	}	
+}
+	
+	
+	
 function removeOption(optionKey) {
 	if (options[optionKey]) {
 		var optionElement = document.getElementById(optionKey);
@@ -193,11 +257,21 @@ function removeOption(optionKey) {
 function changeQuantity(optionKey, value) {
 	if (options[optionKey]) {
 		options[optionKey].quantity += value;
+		var optionType = optionKey.split('_')[0]; // 옵션의 타입 (option1, option2, option3)을 추출
 
 		if (options[optionKey].quantity >= 1 && options[optionKey].quantity <= 99) {
 			var quantityElement = document.getElementById('quantity_' + optionKey);
 			quantityElement.innerText = options[optionKey].quantity;
-			var totalPrice = (basicPrice + options[optionKey].price) * options[optionKey].quantity;
+
+			var optionPrice = options[optionKey].price || 0; // 옵션 가격이 없다면 0으로 처리
+			var totalPrice;
+
+			if (optionType === 'option3') {
+				totalPrice = (basicPrice2 + optionPrice) * options[optionKey].quantity; // option3일 경우 basicPrice2 사용
+			} else {
+				totalPrice = (basicPrice + optionPrice) * options[optionKey].quantity;
+			}
+
 			document.getElementById('amount_' + optionKey).innerText = totalPrice + '원 ';
 			updateTotalAmount(); // 총 금액 업데이트
 
@@ -211,9 +285,14 @@ function changeQuantity(optionKey, value) {
 
 function calculateOptionPrice(optionKey) {
 	var option = options[optionKey];
+	var optionType = optionKey.split('_')[0]; // 옵션의 타입 (option1, option2, option3)을 추출
 	var optionPrice = option.price || 0; // 옵션 가격이 없다면 0으로 처리
 
-	return (basicPrice + optionPrice) * option.quantity;
+	if (optionType === 'option3') {
+		return (basicPrice2 + optionPrice) * option.quantity; // option3일 경우 basicPrice2 사용
+	} else {
+		return (basicPrice + optionPrice) * option.quantity;
+	}
 }
 
 function updateTotalAmount() {
