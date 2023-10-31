@@ -112,10 +112,10 @@ span {
 			<div>사용자 ID 또는 비밀번호를 확인 해 주세요</div>
 		</c:if>
 		<form action="/login" method="POST">
-			<input id="id" name="username" placeholder="아이디를 입력 해 주세요."
+			<input id="id" name="userID" placeholder="아이디를 입력 해 주세요."
 				onfocus="clearValue(this)"
 				onblur="restoreValue(this)">
-				<input id="pw" name="password" type="password" placeholder="비밀번호를 입력 해 주세요."
+				<input id="pw" name="userPassword" type="password" placeholder="비밀번호를 입력 해 주세요."
 					onfocus="clearValue(this)"
 					onblur="restoreValue(this)"><br> 
 				<input id="button" type="submit" value="로그인"/>
