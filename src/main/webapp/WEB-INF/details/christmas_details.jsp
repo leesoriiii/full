@@ -75,12 +75,12 @@
         <option value="레드" data-price="0">레드</option>
         <option value="그린" data-price="0">그린</option>
     </select>
-    <select name="option3" id="option3" onchange="showSelection()">
+    <select name="option3" id="option3" onchange="showSelection2()">
         <option value="추가 옵션" selected>추가 옵션</option>
-        <option value="뜨개 루돌프핀 추가(+4,000원)" >뜨개 루돌프핀 추가(+4,000원)</option>
-        <option value="뜨개 트리핀 추가(+4,000원)" >뜨개 트리핀 추가(+4,000원)</option>
-        <option value="눈꽃 리본핀(레드) 추가(+4,000원)" >눈꽃 리본핀(레드) 추가(+4,000원)</option>
-        <option value="눈꽃 리본핀(그린) 추가(+4,000원)" >눈꽃 리본핀(그린) 추가(+4,000원)</option>
+        <option value="뜨개 루돌프핀 추가(+4,000원)"  data-price="4000">뜨개 루돌프핀 추가(+4,000원)</option>
+        <option value="뜨개 트리핀 추가(+4,000원)"  data-price="4000">뜨개 트리핀 추가(+4,000원)</option>
+        <option value="눈꽃 리본핀(레드) 추가(+4,000원)"  data-price="4000">눈꽃 리본핀(레드) 추가(+4,000원)</option>
+        <option value="눈꽃 리본핀(그린) 추가(+4,000원)"  data-price="4000">눈꽃 리본핀(그린) 추가(+4,000원)</option>
     </select>
     <hr id="optionHr">
 <div id="selected_options"></div>
@@ -94,7 +94,7 @@
 </div>
 </div>
 <br>
-<hr>
+<hr id="optionHr">
 <img src="../img(details)/christmas.png" alt="Details Page Image" style="margin-top:50px;">
 
 

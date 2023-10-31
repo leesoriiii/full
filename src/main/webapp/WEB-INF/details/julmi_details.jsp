@@ -66,15 +66,15 @@
 <h5 style="text-align: right;">택배 배송 3,000원(주문시 결제)</h5>
 <br>
 <form action="주문처리.php" method="post">
-     <select name="version" id="version" onchange="showSelection()">
-        <option value="버전선택" selected>버전 선택</option>
+     <select name="option1" id="option1" onchange="showSelection()">
+        <option value="버전 선택" selected>버전 선택</option>
         <option value="스마트톡">스마트톡</option>
         <option value="군번줄">군번줄</option>
         <option value="핸드폰고리">핸드폰고리</option>
     </select>
     <br>
-    <select name="outer" id="outer" onchange="showSelection()">
-        <option value="외형선택" selected>외형 선택</option>
+    <select name="option2" id="option2" onchange="showSelection()">
+        <option value="외형 선택" selected>외형 선택</option>
         <option value="기본(5cm)" data-price="0">기본(5cm)</option>
         <option value="고양이(5cm)" data-price="1000">고양이(5cm) (+1,000원)</option>
         <option value="토끼(5cm)" data-price="1000">토끼(5cm) (+1,000원)</option>

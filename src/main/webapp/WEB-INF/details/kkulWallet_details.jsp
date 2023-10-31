@@ -53,13 +53,13 @@
 <h5 style="text-align: right;">택배 배송 3,000원(주문시 결제)</h5>
 <br>
 <form action="주문처리.php" method="post">
-     <select name="color" id="color" onchange="showSelection()">
+     <select name="option1" id="option1" onchange="showSelection()">
         <option value="색상 선택" selected>색상 선택</option>
         <option value="화이트">화이트</option>
         <option value="옐로우">옐로우</option>
     </select>
     <br>
-    <select name="eye" id="eye" onchange="showSelection()">
+    <select name="option2" id="option2" onchange="showSelection()">
         <option value="눈 방향 선택" selected>눈 방향 선택</option>
         <option value="→←">→←</option>
         <option value="→→">→→</option>
