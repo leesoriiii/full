@@ -1,6 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@taglib prefix="sec" uri="http://www.springframework.org/security/tags"%>  
+<%@ page import="java.io.PrintWriter" %>
+<%@taglib prefix="sec" uri="http://www.springframework.org/security/tags"%> 
+ 
 <!DOCTYPE html>
 <html>
 <head>
@@ -201,7 +203,14 @@ function resize() {
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
+<!-- 로그인 정보 담기 -->
 
+<%
+	String userID = null;
+	if(session.getAttribute("userID") != null) {
+		userID = (String)session.getAttribute("userID");
+	}
+%>
 
 	<nav style="backgroundcolor: white">
 		<ul class="menu">
@@ -209,7 +218,7 @@ function resize() {
 				<section class="perspective">
 					<article class="cube">
 						<div class="base">
-							<a href="http://localhost:8081"> <img id="full_shap_logo"
+							<a href="/home"> <img id="full_shap_logo"
 								src="../img/full_shap_logo.png" alt="가득샵 로고">
 							</a>
 						</div>
@@ -237,13 +246,46 @@ function resize() {
 				style="text-decoration: none;">
 					<div class="menu-title">문의</div>
 			</a></li>
+
+			<%
+			if (userID == null) {
+			%>
+			
+			<!-- 사용자가 로그인하지 않은 경우 --> 
+        <li class="menu-item">
+            <div class="menu-title">
+                <div class="custom-icon"></div>
+            </div>
+            <ol class="sub-menu">
+                <li class="sub-menu-item"><a href="/login">로그인</a></li>
+            </ol>
+        </li>
 			
 			
+			<%
+			} else { 
+			%>
+			<!-- 사용자가 로그인한 경우 -->
+			<li class="menu-item">
+				<div class="menu-title">
+					<div class="custom-icon"></div>
+				</div>
+				<ol class="sub-menu">
+					<li><span id="hello"><%= session.getAttribute("userID") %>님<br>반가워요</span></li>
+					<li class="sub-menu-item"><a target="content"
+						href="/accessory/hairpin">마이페이지</a></li>
+					<li class="sub-menu-item"><a target="content"
+						href="/accessory/smart_tok">장바구니</a></li>
+					<li class="sub-menu-item"><a href="/logout">로그아웃</a></li>
+				</ol>
+			</li>
+        
+    <% } %>
 			
-			<sec:authorize access="isAnonymous()">
+			<!-- <sec:authorize access="isAnonymous()">
 				<li class="menu-item">
 					<div class="menu-title">
-						<!-- 로그인 안했을때 마이메뉴 표시 -->
+						 로그인 안했을때 마이메뉴 표시 
 						<div class="custom-icon"></div>
 					</div>
 					<ol class="sub-menu">
@@ -255,7 +297,7 @@ function resize() {
 			<sec:authorize access="isAuthenticated()">
 				<li class="menu-item">
 					<div class="menu-title">
-						<!-- 로그인했을때 마이메뉴 표시 -->
+						로그인했을때 마이메뉴 표시 
 							<div class="custom-icon"></div>
 					</div>
 					<ol class="sub-menu">
@@ -267,7 +309,7 @@ function resize() {
 					<li class="sub-menu-item"><a href="/logout">로그아웃</a></li>
 				</ol>
 				</li>
-			</sec:authorize>
+			</sec:authorize> -->
 		</ul>
 	</nav>
 	<iframe src="../main.jsp"

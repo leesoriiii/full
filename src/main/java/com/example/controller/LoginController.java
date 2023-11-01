@@ -12,7 +12,13 @@ public class LoginController {
 	void login() {
 		
 	}
-	
-			
+	@PostMapping("/loginAction")
+	void loginAction() {
 		
 	}
+	@PostMapping("/logOut")
+	void logoutAction() {
+		
+	}
+	
+}

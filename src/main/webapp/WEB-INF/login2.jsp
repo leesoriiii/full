@@ -87,32 +87,42 @@ span {
 	width: 200px;
 }
 </style>
+<script>
+    function clearValue(inputElement) {
+      inputElement.placeholder = '';
+    }
+    
+    function restoreValue(inputElement) {
+      if (inputElement.value === '') {
+        if (inputElement.id === 'id') {
+          inputElement.placeholder = '아이디를 입력해 주세요.';
+        } else if (inputElement.id === 'pw') {
+          inputElement.placeholder = '비밀번호를 입력해 주세요.';
+        }
+      }
+    }
+</script>
 </head>
 <body>
-	<div class="container">
-		<div class="col-lg-4"></div>
-		<div class="col-lg-4">
-			<div class="jumbotron">
-				<form method="post" action="loginAction">
-				<a href="http://localhost:8081"> <img id="full_shap_logo"
-					src="../img/full_shap_logo.png" alt="가득샵 로고">
-				</a>
-				<div class="form-group">
-					<input type="text" class="form-control" name="userID"
-						placeholder="아이디를 입력 해 주세요." maxlength="20">
-				</div>
-				<div class="form-group">
-					<input type="password" class="form-control" name="userPassword"
-						placeholder="비밀번호를 입력 해 주세요." maxlength="20">
-				</div>
-				<input type="submit" class="btn-primaty-form-control" value="로그인">
-				</form>
-			</div>
-		</div>
-		<div class="col-lg-4"></div>
-	</div>
-	<hr>
+	<section>
+		<a href="http://localhost:8081"> <img id="full_shap_logo"
+			src="../img/full_shap_logo.png" alt="가득샵 로고">
+		</a>
+		<c:if test="${param.error == ''}">
+			<div>사용자 ID 또는 비밀번호를 확인 해 주세요</div>
+		</c:if>
+		<form action="/login" method="POST">
+			<input id="id" name="username" placeholder="아이디를 입력 해 주세요."
+				onfocus="clearValue(this)"
+				onblur="restoreValue(this)">
+				<input id="pw" name="password" type="password" placeholder="비밀번호를 입력 해 주세요."
+					onfocus="clearValue(this)"
+					onblur="restoreValue(this)"><br> 
+				<input id="button" type="submit" value="로그인"/>
+		</form>
+		<hr>
 	<span>회원가입 | 아이디 찾기 | 비밀번호 찾기</span>
+	</section>
 
 </body>
 </html>
