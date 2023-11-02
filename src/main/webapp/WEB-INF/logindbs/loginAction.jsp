@@ -16,6 +16,7 @@
 <body>
 	<%
 		String userID = null;
+	//로그인 한 상태이면 사용할수 없게
 		if(session.getAttribute("userID") != null) {
 			userID = (String) session.getAttribute("userID");
 		}
@@ -26,11 +27,14 @@
 			script.println("location.href = '/'");
 			script.println("</script>");
 		}
+		
+		
 		UserDAO userDAO = new UserDAO();
 		int result = userDAO.login(user.getUserID(), user.getUserPassword());
 		
 		if(result == 1) {
 			session.setAttribute("userID", user.getUserID());
+			session.setAttribute("userName", user.getUserName());
 			PrintWriter script = response.getWriter();
 			script.println("<script>");
 			script.println("location.href = '/'");

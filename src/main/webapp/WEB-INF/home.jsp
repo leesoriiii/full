@@ -211,6 +211,13 @@ function resize() {
 		userID = (String)session.getAttribute("userID");
 	}
 %>
+<%
+	String userName = null;
+	if(session.getAttribute("userName") != null) {
+		userName = (String)session.getAttribute("userName");
+	}
+%>
+<!--<div>Welcome, <%= userName %>!</div>  -->
 
 	<nav style="backgroundcolor: white">
 		<ul class="menu">
@@ -242,7 +249,7 @@ function resize() {
 					<div class="menu-title">반려용품</div>
 			</a>
 				</li>
-			<li class="menu-item"><a href="cs.jsp" target="content"
+			<li class="menu-item"><a href="/board/cs" target="content"
 				style="text-decoration: none;">
 					<div class="menu-title">문의</div>
 			</a></li>
