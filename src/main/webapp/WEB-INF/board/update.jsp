@@ -7,13 +7,15 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>cube.jsp</title>
+<title>update.jsp</title>
 <style type="text/css">
-@font-face{
-font-family:'DNFBitBitv2';
-font-style:normal;font-weight:400;src:url('//cdn.df.nexon.com/img/common/font/DNFBitBitv2.otf')format('opentype')}
+@font-face {
+font-family: 'UhBeeRami';
+src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_five@.2.0/UhBeeRami.woff') format('woff');
+font-weight: normal;
+font-style: normal;
+}
 body {
-	margin: 100px;
 	background-color: #FCDEAB;
 	display: flex;
  	flex-direction: column;
@@ -21,8 +23,18 @@ body {
 	justify-content: center;
     align-items: center;
 }
-
-
+#heading{
+	font-family: 'UhBeeRami';
+	color: white;
+    font-size: 80px;
+    text-shadow: 2px 2px #faa821;
+}
+#header {
+	padding-top: 0px;
+	width: 110%;
+	padding-left: 17%;
+	margin-bottom: 20px;
+}
 </style>
 </head>
 <body>

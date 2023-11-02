@@ -11,11 +11,13 @@
 <meta charset="UTF-8">
 <title>cube.jsp</title>
 <style type="text/css">
-@font-face{
-font-family:'DNFBitBitv2';
-font-style:normal;font-weight:400;src:url('//cdn.df.nexon.com/img/common/font/DNFBitBitv2.otf')format('opentype')}
+@font-face {
+font-family: 'UhBeeRami';
+src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_five@.2.0/UhBeeRami.woff') format('woff');
+font-weight: normal;
+font-style: normal;
+}
 body {
-	margin: 100px;
 	background-color: #FCDEAB;
 	display: flex;
  	flex-direction: column;
@@ -23,8 +25,12 @@ body {
 	justify-content: center;
     align-items: center;
 }
-
-
+#heading{
+	font-family: 'UhBeeRami';
+	color: white;
+    font-size: 80px;
+    text-shadow: 2px 2px #faa821;
+}
 </style>
 </head>
 <body>
@@ -48,7 +54,7 @@ body {
 	Bbs bbs = new BbsDAO().getBbs(bbsID);
 %>
 <hr>
-<h1 id="heading">글내용</h1>
+<h1 id="heading">Review</h1>
 
 	<div class="container">
 		<div class="row">
@@ -83,7 +89,7 @@ body {
 				if(userID !=null && userID.equals(bbs.getUserID())) {
 			%>
 					<a href="update?bbsID=<%= bbsID %>" class="btn-primary">수정</a>
-					<a href="deleteAction?bbsID=<%= bbsID %>" class="btn-primary">삭제</a>
+					<a onclick="return confirm('정말로 삭제하시겠습니까?')" href="deleteAction?bbsID=<%= bbsID %>" class="btn-primary">삭제</a>
 			<%
 				}
 			%>

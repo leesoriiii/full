@@ -9,8 +9,13 @@
 @font-face{
 font-family:'DNFBitBitv2';
 font-style:normal;font-weight:400;src:url('//cdn.df.nexon.com/img/common/font/DNFBitBitv2.otf')format('opentype')}
+@font-face {
+font-family: 'UhBeeRami';
+src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_five@.2.0/UhBeeRami.woff') format('woff');
+font-weight: normal;
+font-style: normal;
+}
 body {
-	margin: 100px;
 	background-color: #FCDEAB;
 	display: flex;
  	flex-direction: column;
@@ -18,8 +23,12 @@ body {
 	justify-content: center;
     align-items: center;
 }
-
-
+#heading{
+	font-family: 'UhBeeRami';
+	color: white;
+    font-size: 80px;
+    text-shadow: 2px 2px #faa821;
+}
 </style>
 </head>
 <body>
@@ -31,7 +40,7 @@ body {
 %>
 
 <hr>
-<h1 id="heading">문의게시판</h1>
+<h1 id="heading">Review</h1>
 
 <div class="container">
 		<div class="row">
@@ -45,13 +54,14 @@ body {
 				<tbody>
 					<tr>
 						<td><input type="text" class="form-control" placeholder="글 제목" name="bbsTitle" maxlength="50"></td>
+						<td><input type="submit" class="btn-primary" value="글쓰기"></td>
 					</tr>
 					<tr>
 						<td><textarea class="form-control" placeholder="글 내용" name="bbsContent" maxlength="2048" style="height: 350px;"></textarea></td>
 					</tr>
 				</tbody>
 			</table>
-				<input type="submit" class="btn-primary" value="글쓰기">
+				
 		</form>
 		</div>
 	</div>

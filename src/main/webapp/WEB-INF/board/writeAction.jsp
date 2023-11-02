@@ -1,3 +1,5 @@
+<%@page import="org.springframework.scripting.ScriptCompilationException"%>
+<%@page import="java.awt.Window"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="jakarta.tags.core"%>
@@ -25,7 +27,7 @@
 		PrintWriter script = response.getWriter();
 		script.println("<script>");
 		script.println("alert('로그인이 필요한 서비스 입니다.')");
-		script.println("location.href = '/login'");
+		script.println("location.href = '/logindbs/login'");
 		script.println("</script>");
 	} else {
 		if(bbs.getBbsTitle() == null || bbs.getBbsContent() == null) {
