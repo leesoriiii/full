@@ -94,7 +94,7 @@ span {
 		<div class="col-lg-4">
 			<div class="jumbotron">
 				<form method="post" action="loginAction">
-				<a href="http://localhost:8081"> <img id="full_shap_logo"
+				<a href="/"> <img id="full_shap_logo"
 					src="../img/full_shap_logo.png" alt="가득샵 로고">
 				</a>
 				<div class="form-group">

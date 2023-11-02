@@ -218,7 +218,7 @@ function resize() {
 				<section class="perspective">
 					<article class="cube">
 						<div class="base">
-							<a href="/home"> <img id="full_shap_logo"
+							<a href="/"> <img id="full_shap_logo"
 								src="../img/full_shap_logo.png" alt="가득샵 로고">
 							</a>
 						</div>
@@ -257,7 +257,10 @@ function resize() {
                 <div class="custom-icon"></div>
             </div>
             <ol class="sub-menu">
-                <li class="sub-menu-item"><a href="/login">로그인</a></li>
+                <li class="sub-menu-item"><a href="/logindbs/login">로그인</a></li>
+            </ol>
+            <ol class="sub-menu">
+                <li class="sub-menu-item"><a href="/logindbs/join" >회원가입</a></li>
             </ol>
         </li>
 			
