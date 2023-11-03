@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>cube.jsp</title>
+<title>write.jsp</title>
 <style type="text/css">
 @font-face{
 font-family:'DNFBitBitv2';

@@ -9,7 +9,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>cube.jsp</title>
+<title>view.jsp</title>
 <style type="text/css">
 @font-face {
 font-family: 'UhBeeRami';

@@ -6,7 +6,9 @@
 <head>
 <meta charset="UTF-8">
 <title>Login.jsp</title>
+<link rel="icon" href="../img/favicon.png">
 <style type="text/css">
+
 section {
 	width: 50%;
 	margin: auto;

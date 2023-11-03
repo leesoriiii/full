@@ -103,6 +103,8 @@ th {
 		pageNumber = Integer.parseInt(request.getParameter("pageNumber"));
 	}
 %>
+
+
 <h1 id="heading">Review</h1>
 
 <div class="container">
@@ -143,6 +145,9 @@ th {
 				<a href="cs?pageNumber=<%=pageNumber + 1%>" class="btn-success-btn-arraw-left">다음</a>
 			<%
 				}
+			%>
+			<% 
+		
 			%>
 			<a href="/board/write" class="btn-primary">글쓰기</a>
 		</div>

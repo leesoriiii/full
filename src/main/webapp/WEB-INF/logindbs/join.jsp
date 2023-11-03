@@ -6,6 +6,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Join.jsp</title>
+<link rel="icon" href="../img/favicon.png">
 <style type="text/css">
 @font-face {
 font-family: 'UhBeeRami';
