@@ -24,6 +24,9 @@ configurations {
 repositories {
 	mavenCentral()
 }
+bootWar {
+    duplicatesStrategy = 'exclude'
+}
 
 eclipse {
     wtp {
