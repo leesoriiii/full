@@ -14,15 +14,10 @@ java {
 }
 
 configurations {
-	compileOnly {
-		extendsFrom annotationProcessor
+	//compileOnly {
+		//extendsFrom annotationProcessor
 		
 		all*.exclude group: 'mysql', module: 'mysql-connector-java'
-	}
-}
-
-configurations.all {
-    exclude group: 'mysql', module: 'mysql-connector-java'
 }
 
 war {
