@@ -10,15 +10,13 @@
 section {
 	width: 50%;
 	margin: auto;
+	
 }
 
 fieldset {
 	margin: 20px 0px;
 }
 
-input {
-	padding: 0.5em;
-}
 
 body {
 	display: grid;
@@ -33,17 +31,16 @@ hr {
 	border: none; /* 기본 테두리 제거 */
 	border-top: 2px solid #faa821;
 	width: 250px; /* 가로 너비 */
-	margin-top: 20px;
-	margin-bottom: 20px;
 }
 
 img {
 	display: block;
 	margin: 0 auto;
-	margin-bottom: 50px;
+	margin-bottom: 20px;
 }
 
 input {
+	padding: 0.5em;
 	display: block;
 	margin: 0 auto;
 }
@@ -55,7 +52,7 @@ div {
 	font-weight: bold;
 }
 
-#button {
+.button {
 	width: 220px;
 	background-color: #FCDEAB;
 	border: 1px solid #FBA720;
@@ -66,53 +63,60 @@ div {
 	font-weight: bold;
 }
 
-#button:hover {
+.button:hover {
 	background-color: #FBA720;
 	border: 1px solid #FBA720;
 	color: #ffffff;
 }
-
 span {
-	display: block; /* 블록 수준 요소로 변경하여 다른 요소와 독립적으로 배치 */
-	text-align: center; /* 가운데 정렬 */
-	margin-top: 20px; /* 원하는 여백을 지정 */
-	font-size: 12px;
+	display: block;
+  text-align: center;
+  font-size: 12px;
+}
+#id {
+	margin-bottom: -10px;
 }
 
-#id {
-	margin-bottom: 10px;
-}
 
 #id, #pw {
 	width: 200px;
 }
+section {
+	width: 50%;
+	margin: auto;
+}
+a:hover { 
+	color : inherit;
+	text-decoration: underline;
+	
+}
+a { 
+	color : inherit;
+	text-decoration: none;
+}
 </style>
 </head>
 <body>
+<section>
 	<div class="container">
-		<div class="col-lg-4"></div>
-		<div class="col-lg-4">
-			<div class="jumbotron">
 				<form method="post" action="loginAction">
 				<a href="/"> <img id="full_shap_logo"
 					src="../img/full_shap_logo.png" alt="가득샵 로고">
 				</a>
 				<div class="form-group">
-					<input type="text" class="form-control" name="userID"
+					<input id=id type="text" class="form-control" name="userID"
 						placeholder="아이디를 입력 해 주세요." maxlength="20">
 				</div>
 				<div class="form-group">
-					<input type="password" class="form-control" name="userPassword"
+					<input id=pw type="password" class="form-control" name="userPassword"
 						placeholder="비밀번호를 입력 해 주세요." maxlength="20">
 				</div>
-				<input type="submit" class="btn-primaty-form-control" value="로그인">
+				<input type="submit" class="button" value="로그인">
 				</form>
-			</div>
 		</div>
-		<div class="col-lg-4"></div>
-	</div>
 	<hr>
-	<span>회원가입 | 아이디 찾기 | 비밀번호 찾기</span>
+	<span><a href="/logindbs/join">회원가입</a> | 아이디 찾기 | 비밀번호 찾기</span>
+		</section>
 
 </body>
 </html>

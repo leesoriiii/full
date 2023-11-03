@@ -55,8 +55,10 @@
 <form action="주문처리.php" method="post">
      <select name="option1" id="option1" onchange="showSelection()">
         <option value="색상 선택" selected>색상 선택</option>
-        <option value="화이트">화이트</option>
+        <option value="핫핑크">핫핑크</option>
+        <option value="연핑크">연핑크</option>
         <option value="옐로우">옐로우</option>
+        <option value="라일락">라일락</option>
     </select>
     <br>
     <hr id="optionHr">

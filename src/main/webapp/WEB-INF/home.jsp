@@ -251,7 +251,7 @@ function resize() {
 				</li>
 			<li class="menu-item"><a href="/board/cs" target="content"
 				style="text-decoration: none;">
-					<div class="menu-title">문의</div>
+					<div class="menu-title">리뷰</div>
 			</a></li>
 
 			<%

@@ -49,6 +49,7 @@ a {
 	font-family: 'Orbit-Regular';
 }
 #heading{
+	margin-top:20px;
 	font-family: 'UhBeeRami';
 	color: white;
     font-size: 80px;
@@ -75,6 +76,7 @@ th, tr, td {
 	border: 1px solid #f38400;
 	height: 30px;
 }
+
 th {
 	font-weight: bold; 
 	background-color: #ffffff;
@@ -106,12 +108,12 @@ th {
 <div class="container">
 		<div class="row">
 			<table class="table_striped" style="text-align: center; ">
-				<thead>
+				<thead style="color:#ffffff; background-color: #f38400;">
 					<tr>
-						<th style="text-align: center; width: 50px;">번호</th>
-						<th style="text-align: center; width: 500px;">제목</th>
-						<th style="text-align: center; width: 100px;">작성자</th>
-						<th style="text-align: center; width: 200px;">작성일</th>
+						<th style="text-align: center; width: 50px; background-color: #f38400;">번호</th>
+						<th style="text-align: center; width: 500px; background-color: #f38400;">제목</th>
+						<th style="text-align: center; width: 100px; background-color: #f38400;">작성자</th>
+						<th style="text-align: center; width: 200px; background-color: #f38400;">작성일</th>
 					</tr>
 				</thead>
 				<tbody>
