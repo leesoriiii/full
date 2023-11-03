@@ -24,7 +24,7 @@ configurations {
 repositories {
 	mavenCentral()
 }
-bootWar {
+War {
     duplicatesStrategy = 'exclude'
 }
 
