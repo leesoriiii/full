@@ -28,6 +28,7 @@ drop table if exists BBS;
 create table BBS ( 
      bbsID INT,
      bbsTitle VARCHAR(50),
+     userID VARCHAR(20),
      bbsDate DATETIME,
      bbsContent VARCHAR(2048),
      bbsAvailable INT,
