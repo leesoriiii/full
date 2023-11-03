@@ -21,11 +21,13 @@ configurations {
 	}
 }
 
+configurations.all {
+    exclude group: 'mysql', module: 'mysql-connector-java'
+war {
+    duplicatesStrategy = 'exclude'
+}
 repositories {
 	mavenCentral()
-}
-War {
-    duplicatesStrategy = 'exclude'
 }
 
 eclipse {
