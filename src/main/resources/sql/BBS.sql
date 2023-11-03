@@ -1,8 +1,8 @@
 USE BBS;
 
-drop table if exists USER;
+drop table if exists user;
 
-create table USER ( 
+create table user ( 
      userID VARCHAR(20),
      userPassword VARCHAR(20),
      userName VARCHAR(20),
@@ -18,7 +18,7 @@ insert into USER values ('test', '1234', '테스트', '남', 'test@naver.com');
 
 commit;
 
-select * from USER;
+select * from user;
 
 
 
