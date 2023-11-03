@@ -16,6 +16,8 @@ java {
 configurations {
 	compileOnly {
 		extendsFrom annotationProcessor
+		
+		all*.exclude group: 'mysql', module: 'mysql-connector-java'
 	}
 }
 
