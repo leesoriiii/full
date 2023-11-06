@@ -12,12 +12,12 @@ public class BbsDAO {
 	
 	public BbsDAO() {
 		try {
-			//String dbURL = "jdbc:mysql://mysql.c3cavxl5dxej.ap-northeast-2.rds.amazonaws.com:3306/BBS";
-			//String dbID = "admin"; 
-			//String dbPassword = "qwer1234";
-			String dbURL = "jdbc:mysql://localhost:3306/BBS";
-			String dbID = "root"; 
-			String dbPassword = "1234";
+			String dbURL = "jdbc:mysql://mysql.c3cavxl5dxej.ap-northeast-2.rds.amazonaws.com:3306/BBS";
+			String dbID = "admin"; 
+			String dbPassword = "qwer1234";
+			//String dbURL = "jdbc:mysql://localhost:3306/BBS";
+			//String dbID = "root"; 
+			//String dbPassword = "1234";
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			conn = DriverManager.getConnection(dbURL, dbID, dbPassword);
 		} catch (Exception e) {
