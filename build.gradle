@@ -31,7 +31,7 @@ eclipse {
             facet name: 'wst.jsdt.web', version: '1.0'// JavaScript
         }
     }
-}
+} 
 
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-security'
