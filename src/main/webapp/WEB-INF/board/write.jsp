@@ -73,7 +73,7 @@ hr {
 	}
 %>
 
-<h1 id="heading">Review</h1>
+<h1 id="heading">게시글 작성</h1>
 
 <div class="container">
 		<div class="row">

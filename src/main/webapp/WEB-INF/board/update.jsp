@@ -123,7 +123,7 @@ hr {
 			<table class="table_striped" style="text-align: center; border: 1px solid #00000; ">
 				<tbody style="margin-left: -160px;">
 					<tr>
-						<td><input type="text" class="form-control" placeholder="글 제목" name="bbsTitle" maxlength="50" style="width: 800px; height: 25px; border: 1px solid #faa821;font-size: 15px; value="<%= bbs.getBbsTitle()%>"></td>
+						<td><input type="text" class="form-control" placeholder="글 제목" name="bbsTitle" maxlength="50" style="width: 800px; height: 25px; border: 1px solid #faa821;font-size: 15px;" value="<%= bbs.getBbsTitle()%>"></td>
 						<td><input type="submit" class="btn-primary" value="글수정"></td>
 					</tr>
 					<tr>
